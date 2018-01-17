@@ -1,0 +1,13 @@
+---
+layout: default
+showcase: true
+modal-id: 4
+date: 2018-01-17
+img: impuls-id.png
+alt: image-alt
+project-date: Februar 2017
+client: Impuls
+category: Apputvikling
+description: Impuls tok igjen kontakt med meg og ønsket en festivalapp til bruk både i Stavanger og i Trondheim.
+link: "http://kodekameraten.no/impuls"
+---

@@ -4,11 +4,11 @@
   <generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator>
   <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2018-01-17T14:10:58+01:00</updated>
+  <updated>2018-01-17T14:40:48+01:00</updated>
   <id>http://localhost:4000/</id>
 
   
-    <title type="html">sjoen.me</title>
+    <title type="html">Kodekameraten.no</title>
   
 
   
@@ -20,12 +20,80 @@
   
   
     <entry>
-      <title type="html">Tenoase</title>
-      <link href="http://localhost:4000/apputvikling/2017/03/05/TenOase/" rel="alternate" type="text/html" title="Tenoase" />
+      <title type="html">Impuls 2018</title>
+      <link href="http://localhost:4000/apputvikling/2018/01/17/Impuls-2018/" rel="alternate" type="text/html" title="Impuls 2018" />
+      <published>2018-01-17T00:00:00+01:00</published>
+      <updated>2018-01-17T00:00:00+01:00</updated>
+      <id>http://localhost:4000/apputvikling/2018/01/17/Impuls-2018</id>
+      <content type="html" xml:base="http://localhost:4000/apputvikling/2018/01/17/Impuls-2018/"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name></name>
+        
+        
+      </author>
+
+      
+        <category term="Apputvikling" />
+      
+
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Tenoase Sommeren 2017</title>
+      <link href="http://localhost:4000/apputvikling/2017/03/05/TenOase-sommeren-2017/" rel="alternate" type="text/html" title="Tenoase Sommeren 2017" />
       <published>2017-03-05T00:00:00+01:00</published>
       <updated>2017-03-05T00:00:00+01:00</updated>
-      <id>http://localhost:4000/apputvikling/2017/03/05/TenOase</id>
-      <content type="html" xml:base="http://localhost:4000/apputvikling/2017/03/05/TenOase/"></content>
+      <id>http://localhost:4000/apputvikling/2017/03/05/TenOase-sommeren-2017</id>
+      <content type="html" xml:base="http://localhost:4000/apputvikling/2017/03/05/TenOase-sommeren-2017/"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name></name>
+        
+        
+      </author>
+
+      
+        <category term="Apputvikling" />
+      
+
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Colorophone</title>
+      <link href="http://localhost:4000/apputvikling/2017/02/06/Colorophone/" rel="alternate" type="text/html" title="Colorophone" />
+      <published>2017-02-06T00:00:00+01:00</published>
+      <updated>2017-02-06T00:00:00+01:00</updated>
+      <id>http://localhost:4000/apputvikling/2017/02/06/Colorophone</id>
+      <content type="html" xml:base="http://localhost:4000/apputvikling/2017/02/06/Colorophone/"></content>
 
       
       
@@ -60,40 +128,6 @@
       <updated>2017-02-05T00:00:00+01:00</updated>
       <id>http://localhost:4000/apputvikling/2017/02/05/IMPULS-Trondheim</id>
       <content type="html" xml:base="http://localhost:4000/apputvikling/2017/02/05/IMPULS-Trondheim/"></content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name></name>
-        
-        
-      </author>
-
-      
-        <category term="Apputvikling" />
-      
-
-      
-
-      
-        <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Colorophone</title>
-      <link href="http://localhost:4000/apputvikling/2017/02/05/Colorophone/" rel="alternate" type="text/html" title="Colorophone" />
-      <published>2017-02-05T00:00:00+01:00</published>
-      <updated>2017-02-05T00:00:00+01:00</updated>
-      <id>http://localhost:4000/apputvikling/2017/02/05/Colorophone</id>
-      <content type="html" xml:base="http://localhost:4000/apputvikling/2017/02/05/Colorophone/"></content>
 
       
       
