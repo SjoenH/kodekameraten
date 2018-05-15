@@ -28,7 +28,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: rgb(128, 223, 199);
+  color: rgb(223, 193, 128);
 }
 a:hover,
 a:focus {
@@ -72,8 +72,7 @@ p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: rgb(128, 223, 199);
-}
+  color: #fcbd20;}
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: #fcbd20;
@@ -95,11 +94,10 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: rgb(128, 223, 199);
-}
+  color: #fcbd20;}
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: rgb(128, 223, 199) !important;
+  color: #fcbd20 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -135,7 +133,7 @@ p {
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: rgb(128, 223, 199);
+    color: #fcbd20;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -143,7 +141,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: rgb(128, 223, 199);
+    color: #fcbd20;
   }
 }
 header {
@@ -398,8 +396,8 @@ footer ul li a.active {
 }
 .bg-primary {
   background: rgb(128, 223, 199);
-  background: -webkit-linear-gradient(rgb(128, 223, 199), rgb(69,99,124));
-  background: linear-gradient(rgb(128, 223, 199), rgb(69,99,124));
+  background: -webkit-linear-gradient(rgb(245, 147, 91), rgb(81, 112, 107));
+  background: linear-gradient(rgb(223, 198, 128), rgb(69,99,124));
 }
 .text-primary {
   color: rgb(128, 223, 199);
