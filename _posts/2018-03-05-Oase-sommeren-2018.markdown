@@ -1,0 +1,13 @@
+---
+layout: default
+showcase: true
+modal-id: 5
+<!-- date: 2017-02-05 -->
+img: cake.png
+<!-- alt: image-alt -->
+project-date: Våren 2018
+client: Oase
+category: Apputvikling
+description: I forbindelse med SommerOase 2018 har jeg utviklet en program-app. 
+link: "http://kodekameraten.no/oase"
+---
