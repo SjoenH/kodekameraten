@@ -149,7 +149,7 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background-image: url('../img/bg.jpg');
+  background-image: url('../img/bg.svg');
   background-size: cover;
   background-position: center;
 
@@ -397,7 +397,11 @@ footer ul li a.active {
 .bg-primary {
   background: rgb(128, 223, 199);
   background: -webkit-linear-gradient(#9198e5, #e66465);
-  background:linear-gradient(#e66465, #9198e5); 
+  background:linear-gradient(rgb(127, 190, 159),rgba(41, 131, 139, 0.648)); 
+  /* background-image: url('../img/bg.svg');
+  background-position: bottom;
+  background-size: 100%;
+  background-position: right; */
 }
 .text-primary {
   color: rgb(128, 223, 199);
