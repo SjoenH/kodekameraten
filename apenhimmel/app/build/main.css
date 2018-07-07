@@ -45,6 +45,26 @@ ion-item > div.item-inner > div > ion-label {
   color: black;
 }
 
+.VoksenCamp ion-item {
+  background-size: 200px;
+  background-blend-mode: hard-light;
+}
+
+.KidsCamp ion-item {
+  background-image: url("../assets/kids.png") !important;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.YouthCamp ion-item {
+  background-image: url("../assets/youth.png") !important;
+  background-size: 200px;
+  background-blend-mode: hard-light;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -51233,26 +51253,6 @@ page-program > ion-content > div.scroll-content > span > ion-spinner {
 
 .note-md {
   color: black;
-}
-
-.VoksenCamp ion-item {
-  background-size: 200px;
-  background-blend-mode: hard-light;
-}
-
-.KidsCamp ion-item {
-  background-image: url("../assets/kids.png") !important;
-  background-size: 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.YouthCamp ion-item {
-  background-image: url("../assets/youth.png") !important;
-  background-size: 200px;
-  background-blend-mode: hard-light;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .staticwidth {
