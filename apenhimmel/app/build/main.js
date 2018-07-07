@@ -604,13 +604,14 @@ var AppConfigProvider = (function () {
         this.cntProvider = cntProvider;
         this.toast = toast;
         this.mainTrack = 'Felles';
-        this.tracks = ["" + this.mainTrack];
+        this.tracks = [];
         this.user = {};
         this.subscribeToTopic("" + this.mainTrack);
         this.setarrangement("" + this.mainTrack);
         storage.get('tracks').then(function (tracks) {
             if (tracks != null) {
                 _this.tracks = tracks;
+                _this.addTrack(_this.mainTrack);
             }
         });
         this.checkAdmin();
