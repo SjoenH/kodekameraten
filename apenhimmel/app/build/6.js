@@ -4,10 +4,11 @@ webpackJsonp([6],Array(449).concat([
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventCreatorPageModule", function() { return EventCreatorPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventDetailPageModule", function() { return EventDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_creator__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_detail__ = __webpack_require__(588);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__ = __webpack_require__(261);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17,19 +18,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EventCreatorPageModule = (function () {
-    function EventCreatorPageModule() {
-    }
-    return EventCreatorPageModule;
-}());
-EventCreatorPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_2__event_creator__["a" /* EventCreatorPage */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__event_creator__["a" /* EventCreatorPage */])]
-    })
-], EventCreatorPageModule);
 
-//# sourceMappingURL=event-creator.module.js.map
+var EventDetailPageModule = (function () {
+    function EventDetailPageModule() {
+    }
+    return EventDetailPageModule;
+}());
+EventDetailPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]), __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__["b" /* IonicImageViewerModule */]]
+    })
+], EventDetailPageModule);
+
+//# sourceMappingURL=event-detail.module.js.map
 
 /***/ }),
 /* 450 */,
@@ -16543,14 +16545,18 @@ webpackContext.id = 585;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventCreatorPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_alert_alert_controller__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment__ = __webpack_require__(464);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_content_content__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_content_content__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16566,68 +16572,155 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EventCreatorPage = (function () {
-    function EventCreatorPage(navCtrl, navParams, viewCtrl, alertCtrl, cntProvider) {
-        var _this = this;
+
+
+
+
+var EventDetailPage = (function () {
+    function EventDetailPage(navCtrl, navParams, viewCtrl, modalCtr, storage, http, imageViewerCtrl, acp, cntProvider) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtrl = viewCtrl;
-        this.alertCtrl = alertCtrl;
+        this.modalCtr = modalCtr;
+        this.storage = storage;
+        this.http = http;
+        this.imageViewerCtrl = imageViewerCtrl;
+        this.acp = acp;
         this.cntProvider = cntProvider;
-        this.arrangements = [];
-        __WEBPACK_IMPORTED_MODULE_4_moment__["locale"]('nb');
-        this.eventData = navParams.get('eventData');
-        this.cntProvider.getArrangements().then(function (data) {
-            _this.arrangements = data;
-        });
+        this.team = [];
+        this.events = [];
+        this.seminars = [];
+        this.data = {};
+        this.user = { admin: false };
+        __WEBPACK_IMPORTED_MODULE_3_moment__["locale"]('nb');
+        this.user = this.acp.getUser();
+        this.data = this.navParams.get('eventData');
     }
-    EventCreatorPage.prototype.formatDate = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_4_moment__(dateobj).format('DD/MM HH:mm');
+    EventDetailPage.prototype.momentFromNow = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).fromNow();
     };
-    EventCreatorPage.prototype.close = function () {
+    EventDetailPage.prototype.ionViewDidEnter = function () {
+        if (this.data.refMessageCategory) {
+            this.getSeminars();
+        }
+        if (this.data.refEventCategory) {
+            this.getEvents();
+        }
+        if (this.data.refPerson) {
+            this.getTeam();
+        }
+    };
+    EventDetailPage.prototype.edit = function () {
+        var _this = this;
+        var modal = this.modalCtr.create('EventCreatorPage', {
+            eventData: this.data
+        });
+        modal.onDidDismiss(function (updatedData) {
+            if (updatedData) {
+                if (updatedData.delete === true) {
+                    _this.cntProvider.deleteEvent(updatedData);
+                    _this.viewCtrl.dismiss({ refresh: true });
+                }
+                else {
+                    _this.data = updatedData;
+                    _this.cntProvider.updateEvent(updatedData);
+                }
+            }
+        });
+        modal.present();
+    };
+    EventDetailPage.prototype.close = function () {
         this.viewCtrl.dismiss();
     };
-    EventCreatorPage.prototype.saveChanges = function () {
-        this.viewCtrl.dismiss(this.eventData);
+    EventDetailPage.prototype.onClick = function (imageToView) {
+        var viewer = this.imageViewerCtrl.create(imageToView);
+        viewer.present();
     };
-    EventCreatorPage.prototype.delete = function () {
+    EventDetailPage.prototype.dateFromNow = function (date) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment__(date).fromNow();
+    };
+    EventDetailPage.prototype.formatDate = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).format('DD/MM HH:mm');
+    };
+    EventDetailPage.prototype.formatOnlyTime = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).format('HH:mm');
+    };
+    EventDetailPage.prototype.getSeminars = function () {
         var _this = this;
-        var alert = this.alertCtrl.create({
-            title: 'Slette event?',
-            message: 'Er du helt sikker?',
-            buttons: [
-                {
-                    text: 'Behold',
-                    handler: function () {
-                        return;
-                    }
-                },
-                {
-                    text: 'Slett',
-                    handler: function () {
-                        _this.eventData.delete = true;
-                        _this.viewCtrl.dismiss(_this.eventData);
-                        return;
+        this.storage.get('arrangement').then(function (arrangement) {
+            _this.cntProvider
+                .getMessagesForArrangementWithCategory(arrangement, _this.data.refMessageCategory)
+                .then(function (posts) {
+                _this.seminars = [];
+                for (var key in posts) {
+                    if (posts.hasOwnProperty(key)) {
+                        _this.seminars.push(posts[key]);
                     }
                 }
-            ]
+            });
         });
-        alert.present();
     };
-    return EventCreatorPage;
+    EventDetailPage.prototype.getEvents = function () {
+        var _this = this;
+        this.storage.get('arrangement').then(function (arrangement) {
+            _this.cntProvider
+                .getEventsForArrangementWithCategory(arrangement, _this.data.refEventCategory)
+                .then(function (posts) {
+                _this.events = [];
+                for (var key in posts) {
+                    if (posts.hasOwnProperty(key)) {
+                        _this.events.push(posts[key]);
+                    }
+                }
+            });
+        });
+    };
+    EventDetailPage.prototype.getTeam = function () {
+        var _this = this;
+        this.cntProvider.getTeam(this.data.refPerson)
+            .then(function (posts) {
+            _this.team = [];
+            for (var key in posts) {
+                if (posts.hasOwnProperty(key)) {
+                    _this.team.push(posts[key]);
+                }
+            }
+        });
+    };
+    EventDetailPage.prototype.messageSelected = function (postData) {
+        var modal = this.modalCtr.create('NewsDetailPage', { postData: postData });
+        // modal.onDidDismiss(something => {
+        // });
+        modal.present();
+    };
+    EventDetailPage.prototype.eventSelected = function (eventData) {
+        var modal = this.modalCtr.create('EventDetailPage', { eventData: eventData });
+        // modal.onDidDismiss(something => {
+        // });
+        modal.present();
+    };
+    EventDetailPage.prototype.personSelected = function (personData) {
+        var modal = this.modalCtr.create('PersonDetailPage', { personData: personData });
+        modal.present();
+    };
+    return EventDetailPage;
 }());
-EventCreatorPage = __decorate([
+EventDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-event-creator',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/event-creator/event-creator.html"*/'<!--\n  Generated template for the EventCreatorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons right>\n      <button ion-button padding (click)="saveChanges()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <p>EventCreator</p>\n  <!-- // users: Array, => NOT IN USE AT THE MOMENT... -->\n  <ion-list>\n    <!-- title:"", -->\n    <ion-item>\n      <ion-label stacked>Title*</ion-label>\n      <ion-input type="text" value="" [(ngModel)]="eventData.title"></ion-input>\n    </ion-item>\n    <!-- location: String, -->\n    <ion-item>\n      <ion-label stacked>location*</ion-label>\n      <ion-input type="text" value="" [(ngModel)]="eventData.location"></ion-input>\n    </ion-item>\n    <!-- content:"", -->\n    <ion-item>\n      <ion-label stacked>Content*</ion-label>\n      <ion-textarea [(ngModel)]="eventData.content"></ion-textarea>\n    </ion-item>\n    <!-- fromTime: new Date().toISOString(), -->\n    <ion-item>\n      <p>OBS!:\n        <br>Dato-en her må legges inn i ISO-format. 2 timer før oss.\n        <br>Sjekk under for å se lokal-tid. GMT+2\n      </p>\n    </ion-item>\n    <!-- TODO: Fix the pickers to use local time. Tips: try moment.format();\n     https://forum.ionicframework.com/t/datetime-component-show-local-time-not-utc-time/54171/2 -->\n    <ion-item>\n      <ion-label>Event Start*</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="eventData.fromTime"></ion-datetime>\n    </ion-item>\n    <!-- toTime: new Date().toISOString(), -->\n    <ion-item>\n      <ion-label>Event End*</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="eventData.toTime"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      Lokaltid:\n      <p>Start: {{formatDate(eventData.fromTime)}}</p>\n      <p>Slutt: {{formatDate(eventData.toTime)}}</p>\n    </ion-item>\n    <ion-item>\n      <ion-label stacked>imgURL</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.imgURL"\n                 placeholder="http://via.placeholder.com/350x250"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Spor*</ion-label>\n      <ion-select [(ngModel)]="eventData.arrangement">\n        <ion-option *ngFor="let arrangement of arrangements" value={{arrangement.title}}>{{arrangement.title}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n    <!-- category: "" -->\n    <p>Dersom du vil vise beskjeder under denne eventen, kan du skrive inn en kategori her.\n      (nyhet/info/egendefinert) </p>\n    <ion-item>\n      <ion-label>Category</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.category" placeholder="Seminarbolk 1"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Show Messages with category</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.refMessageCategory" placeholder=""></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Show Events with category</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.refEventCategory" placeholder=""></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Show Team</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.refPerson" placeholder=""></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>channel</ion-label>\n      <ion-input type="text" [(ngModel)]="eventData.channel" placeholder=""></ion-input>\n    </ion-item>\n    <ion-item>\n      <button ion-button color="danger" *ngIf="eventData._id" (click)="delete()" full>Slett event</button>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n<!--EVENT\n    title: { type: String, required: true },\n    content: String,\n    fromTime: Date,\n    toTime: Date,\n    imgURL: String,\n    location: String,\n    arrangement: String, //Arrangement "group" for all events,messages etc...\nNot in use...=>    channel: String, //VoksenOase, TenOase, BoJoKo etc...\n    category: String,//todo: Do we need this?\n    refMessageCategory: String,\n    refEventCategory: String,\n    refPerson: String -->\n'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/event-creator/event-creator.html"*/
+        selector: 'page-event-detail',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/event-detail/event-detail.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons right *ngIf="user.admin">\n      <button ion-button padding color="primary" (click)="edit(data)">\n        <ion-icon name="create"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card class="center">\n    <img src={{data.imgURL}} imageViewer tappable/>\n    <ion-card-header style="white-space: normal;">\n      <h1>{{data.title}}</h1>\n      <p>{{data.arrangement}}</p>\n\n      <span *ngIf="data.location">\n        <h1>\n          <ion-chip>\n            <ion-icon name="map"></ion-icon>\n          </ion-chip> \n          {{data.location}}\n        </h1>\n      </span>\n\n      <span *ngIf="data.fromTime">\n        <h1>\n          <ion-chip>\n            <ion-icon name="clock"></ion-icon>\n          </ion-chip> {{formatDate(data.fromTime)}}\n          <span *ngIf="data.toTime && data.toTime !== data.fromTime">- {{formatOnlyTime(data.toTime)}}</span>\n        </h1>\n      </span>\n    </ion-card-header>\n    \n    <ion-card-content>\n      <div [innerHTML]="data.content"></div>\n      <!-- {{data.category}} -->\n      <span *ngIf="data.webURL">\n        <hr>\n        <a href="{{data.webURL}}">\n          <button ion-button icon-start full>\n            <ion-icon name="globe" item-left></ion-icon>\n            {{data.webURL}}\n          </button>\n        </a>\n      </span>\n      <span *ngIf="data.tlf">\n        <hr>\n        <a href="tel:{{data.tlf}}">\n          <button ion-button icon-start full>\n            <ion-icon name="call" item-left></ion-icon>\n            {{data.tlf}}\n          </button>\n        </a>\n      </span>\n    </ion-card-content>\n  </ion-card>\n  <ion-card *ngIf="data.refMessageCategory">\n    <!-- <ion-card-header>\n      <h2>\n        Info\n      </h2>\n    </ion-card-header> -->\n    <ion-list>\n      <ion-item *ngFor="let infopage of seminars" tappable (click)="messageSelected(infopage)">\n        <ion-avatar item-left *ngIf="infopage.imgURL">\n          <img src={{infopage.imgURL}}/>\n        </ion-avatar>\n        <h2>{{infopage.title}}</h2>\n        <p>{{infopage.content}}</p>\n        <ion-note item-right>{{momentFromNow(infopage.datetime)}}\n          <br> {{infopage.location}}\n        </ion-note>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <ion-card *ngIf="data.refEventCategory">\n    <!-- <ion-card-header>\n      <h2>\n        Hendelser\n      </h2>\n    </ion-card-header> -->\n    <ion-item *ngFor="let event of events" tappable (click)="eventSelected(event)">\n      <ion-avatar item-left *ngIf="event.imgURL">\n        <img src={{event.imgURL}}/>\n      </ion-avatar>\n      <h2>{{event.title}}</h2>\n      <p>{{event.content}}</p>\n      <ion-note item-right>\n        {{momentFromNow(event.fromTime)}}\n        <br> {{formatDate(event.fromTime)}}\n        <!-- <span *ngIf="event.toTime && event.toTime !== event.fromTime">- {{formatOnlyTime(event.toTime)}}</span> -->\n        <br> {{event.location}}\n      </ion-note>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="data.refPerson">\n    <ion-item *ngFor="let person of team" tappable (click)="personSelected(person)">\n      <ion-avatar item-left *ngIf="person.imgURL">\n        <img src={{person.imgURL}}/>\n      </ion-avatar>\n      <h2>{{person.firstName}} {{person.lastName}}</h2>\n      <p>{{person.about}}</p>\n      <ion-note item-right>\n        <p>{{person.role}}</p>\n      </ion-note>\n    </ion-item>\n  </ion-card>\n</ion-content>\n<!-- firstName: req.body.firstName,\n          lastName: req.body.lastName,\n          role: req.body.role,\n          about: req.body.about,\n          number: req.body.number,\n          email: req.body.email,\n          weblink: req.body.weblink,\n          // OTHER\n          arrangement: req.body.arrangement,\n          channel: req.body.channel,\n          team: req.body.team -->'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/event-detail/event-detail.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__["a" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_alert_alert_controller__["a" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_content_content__["a" /* ContentProvider */]])
-], EventCreatorPage);
+        __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__["a" /* ImageViewerController */],
+        __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
+        __WEBPACK_IMPORTED_MODULE_9__providers_content_content__["a" /* ContentProvider */]])
+], EventDetailPage);
 
-//# sourceMappingURL=event-creator.js.map
+//# sourceMappingURL=event-detail.js.map
 
 /***/ })
 ]));

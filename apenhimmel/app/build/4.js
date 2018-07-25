@@ -1,13 +1,13 @@
-webpackJsonp([4],Array(451).concat([
-/* 451 */
+webpackJsonp([4],Array(452).concat([
+/* 452 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoPageModule", function() { return InfoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(590);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__info__ = __webpack_require__(591);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17,29 +17,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = (function () {
-    function HomePageModule() {
+var InfoPageModule = (function () {
+    function InfoPageModule() {
     }
-    return HomePageModule;
+    return InfoPageModule;
 }());
-HomePageModule = __decorate([
+InfoPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
-        ],
-        exports: [
-            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]
-        ]
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__info__["a" /* InfoPage */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__info__["a" /* InfoPage */])]
     })
-], HomePageModule);
+], InfoPageModule);
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=info.module.js.map
 
 /***/ }),
-/* 452 */,
 /* 453 */,
 /* 454 */,
 /* 455 */,
@@ -16546,23 +16538,21 @@ webpackContext.id = 585;
 /* 587 */,
 /* 588 */,
 /* 589 */,
-/* 590 */
+/* 590 */,
+/* 591 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(464);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_navigation_view_controller__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_content_content__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_appconfig_appconfig__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_content_content__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16579,71 +16569,104 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, http, modalCtr, viewCtrl, apc, storage, cntProvider) {
+var InfoPage = (function () {
+    function InfoPage(navCtrl, navParams, modalCtr, acp, cntProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
-        this.http = http;
+        this.navParams = navParams;
         this.modalCtr = modalCtr;
-        this.viewCtrl = viewCtrl;
-        this.apc = apc;
-        this.storage = storage;
+        this.acp = acp;
         this.cntProvider = cntProvider;
+        this.posts = [];
         this.user = {};
-        this.arrangements = [];
-        __WEBPACK_IMPORTED_MODULE_3_moment___default.a.locale('nb');
-        this.storage.get('uid').then(function (uid) {
-            _this.user.uid = uid;
+        this.arrangement = 'Felles';
+        __WEBPACK_IMPORTED_MODULE_2_moment__["locale"]('nb');
+        this.acp.getArrangement().then(function (mainArrangement) {
+            _this.arrangement = mainArrangement;
         });
-        this.cntProvider.getArrangements().then(function (data) {
-            _this.arrangements = data;
-        });
+        this.refreshContentData();
     }
-    HomePage.prototype.momentFromNow = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment___default()(dateobj).fromNow();
+    InfoPage.prototype.ionViewDidEnter = function () {
+        this.user = this.acp.getUser();
+        this.refreshContentData();
     };
-    HomePage.prototype.formatDate = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment___default()(dateobj).format('dddd, Do MMM YYYY');
-    };
-    HomePage.prototype.clickHandler = function (arrangement) {
-        this.apc.setarrangement(arrangement);
-        this.storage.set('arrangement', arrangement);
-        this.apc.mainTrack = arrangement;
-        this.close();
-    };
-    HomePage.prototype.showTutorial = function () {
-        var modal = this.modalCtr.create('TutorialPage');
+    InfoPage.prototype.showSettings = function () {
+        var _this = this;
+        var modal = this.modalCtr.create('SettingsPage');
         modal.present();
-        this.close();
+        modal.onDidDismiss(function () {
+            _this.refreshContentData();
+        });
     };
-    HomePage.prototype.close = function () {
-        this.viewCtrl.dismiss();
+    InfoPage.prototype.itemSelected = function (postData) {
+        var _this = this;
+        var modal = this.modalCtr.create('NewsDetailPage', { postData: postData });
+        modal.onDidDismiss(function (res) {
+            if (res && res.refresh)
+                _this.refreshContentData();
+        });
+        modal.present();
     };
-    HomePage.prototype.login = function () {
-        this.navCtrl.push('LoginPage');
+    InfoPage.prototype.choosearrangement = function () {
+        var _this = this;
+        var modal = this.modalCtr.create('SettingsPage');
+        modal.present();
+        modal.onDidDismiss(function () {
+            _this.refreshContentData();
+        });
     };
-    HomePage.prototype.gotoUserPage = function () {
-        this.navCtrl.push('SettingsPage');
+    InfoPage.prototype.newPost = function () {
+        var _this = this;
+        var postData = {
+            datetime: new Date().toISOString(),
+            arrangement: "" + this.arrangement,
+            category: 'info',
+        };
+        var modal = this.modalCtr.create('MessageCreatorPage', { postData: postData });
+        modal.onDidDismiss(function (newPostData) {
+            if (newPostData) {
+                _this.cntProvider.postMessage(newPostData);
+                _this.refreshContentData();
+            }
+        });
+        modal.present();
     };
-    return HomePage;
+    InfoPage.prototype.momentFromNow = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_2_moment__(dateobj).fromNow();
+    };
+    InfoPage.prototype.formatDate = function (date) {
+        return __WEBPACK_IMPORTED_MODULE_2_moment__(date, 'YYYYMMDD').fromNow();
+    };
+    InfoPage.prototype.doRefresh = function (refresher) {
+        this.refreshContentData().then(function () {
+            refresher.complete();
+        });
+    };
+    InfoPage.prototype.refreshContentData = function () {
+        var _this = this;
+        var promise = new Promise(function (resolve, reject) {
+            var myTracks = _this.acp.getTracks();
+            _this.cntProvider.getMessagesForTracks(myTracks, "info").then(function (posts) {
+                _this.posts = posts;
+                resolve();
+            });
+        });
+        return promise;
+    };
+    return InfoPage;
 }());
-HomePage = __decorate([
+InfoPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content class="bg-img" padding>\n  <ion-card>\n    <ion-card-header>\n      <h1>\n        Åpen Himmel\n      </h1>\n    </ion-card-header>\n    <ion-card-content>\n      If app is showing wrong track by any chance... you may try changing it here. No promises\n    </ion-card-content>\n  </ion-card>\n  <ion-card *ngFor="let arrangement of arrangements">\n    <ion-item tappable (click)=\'clickHandler(arrangement.title)\'>\n      <ion-thumbnail item-end>\n        <img src={{arrangement.imgURL}}/>\n      </ion-thumbnail>\n      <h1>\n        {{arrangement.title}}\n      </h1>\n      <span>{{momentFromNow(arrangement.fromTime)}}</span>\n      <p>Fra: {{formatDate(arrangement.fromTime)}}</p>\n      <p>Til: {{formatDate(arrangement.toTime)}}</p>\n    </ion-item>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/home/home.html"*/
+        selector: 'page-info',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/info/info.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n      Åpen Himmel\n    </ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only small right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n      <!-- <button *ngIf="user.admin" ion-button (click)=\'newPost()\' ion-button>\n        Ny Post\n      </button> -->\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <h1 padding>Informasjon</h1>\n  <span *ngIf="posts.length.valueOf()== 0">\n    <ion-spinner></ion-spinner>\n  </span>\n\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <!-- <p>Her kommer det til å stå noe kjapp info som er viktig å få med seg.</p> -->\n  <!-- <p>Dersom det er noe mer som tar stor plass å forklare kan vi legge det på en egen underside.</p> -->\n\n\n  <ion-list>\n    <span *ngFor="let infopage of posts" [class]="infopage.arrangement">\n      <ion-item class="border" tappable (click)="itemSelected(infopage)">\n        <ion-avatar item-right *ngIf="infopage.imgURL">\n          <img src="{{infopage.imgURL}}">\n        </ion-avatar>\n        <h2 class="BoJoKo" *ngIf="infopage.arrangement===\'BoJoKo\'"> ||BoJoKo||</h2>\n        <h2>{{infopage.title}}</h2>\n        <p>{{infopage.content}}</p>\n        <ion-note>{{infopage.location}}</ion-note>\n        <!-- <ion-note item-right>{{formatDate(infopage.datetime)}}</ion-note> -->\n      </ion-item>\n    </span>\n  </ion-list>\n\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newPost()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/info/info.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_7_ionic_angular_navigation_view_controller__["a" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_9__providers_content_content__["a" /* ContentProvider */]])
-], HomePage);
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_5__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
+        __WEBPACK_IMPORTED_MODULE_6__providers_content_content__["a" /* ContentProvider */]])
+], InfoPage);
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=info.js.map
 
 /***/ })
 ]));

@@ -45,24 +45,36 @@ ion-item > div.item-inner > div > ion-label {
   color: black;
 }
 
-.VoksenCamp ion-item {
-  background-size: 200px;
-  background-blend-mode: hard-light;
+.admin ion-item, .admin {
+  background: rgba(255, 171, 171, 0.8);
 }
 
-.KidsCamp ion-item {
+.Felles ion-item, .Felles {
+  background-size: 200px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.VoksenCamp ion-item, .VoksenCamp {
+  background-size: 200px;
+}
+
+.KidsCamp ion-item, .KidsCamp {
   background-image: url("../assets/kids.png") !important;
-  background-size: 200px;
+  background: rgba(205, 205, 241, 0.8);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
+  background-size: 30%;
+  background-position-x: 94%;
 }
 
-.YouthCamp ion-item {
+.YouthCamp ion-item, .YouthCamp {
   background-image: url("../assets/youth.png") !important;
-  background-size: 200px;
+  background: rgba(217, 247, 255, 0.8);
   background-blend-mode: hard-light;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
+  background-size: 30%;
+  background-position-x: 94%;
 }
 
 .ion-ios-add:before {

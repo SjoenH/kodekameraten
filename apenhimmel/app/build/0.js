@@ -16546,7 +16546,7 @@ webpackContext.id = 585;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgramPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment__ = __webpack_require__(464);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment__);
@@ -16581,7 +16581,7 @@ var ProgramPage = (function () {
         this.modalCtr = modalCtr;
         this.acp = acp;
         this.cntProvider = cntProvider;
-        this.datetimeFirst = false;
+        this.datetimeLast = false;
         this.hideCountdown = false;
         this.arrangement = {};
         this.posts = [];
@@ -16590,27 +16590,37 @@ var ProgramPage = (function () {
         this.acp.getArrangement().then(function (arrangement) {
             _this.arrangement = arrangement;
         });
-        this.storage.get('datetimeFirst').then(function (value) {
-            _this.datetimeFirst = value;
+        this.storage.get('datetimeLast').then(function (value) {
+            _this.datetimeLast = value;
         });
         this.storage.get('hideCountdown').then(function (value) {
             _this.hideCountdown = value;
         });
         this.refreshContentData();
+        // this.storage.get('programEvents').then((posts) => {
+        //   // console.log(`Fetched these events from storage`, posts);
+        //   // this.posts = JSON.parse(posts);
+        //   this.refreshContentData();
+        // }, e => {
+        //   console.log(e);
+        //   this.refreshContentData();
+        // });
     }
     ProgramPage.prototype.ionViewWillEnter = function () {
         var _this = this;
         this.user = this.acp.getUser();
-        this.storage.get('datetimeFirst').then(function (value) {
-            _this.datetimeFirst = value;
+        this.storage.get('datetimeLast').then(function (value) {
+            _this.datetimeLast = value;
         });
         this.storage.get('hideCountdown').then(function (value) {
             _this.hideCountdown = value;
         });
+    };
+    ProgramPage.prototype.ionViewDidEnter = function () {
         this.refreshContentData();
     };
     ProgramPage.prototype.momentFromNow = function (dateobj) {
-        this.now = Date.now();
+        // this.now = Date.now();
         return __WEBPACK_IMPORTED_MODULE_4_moment___default()(dateobj).fromNow(); // use fromTime(true) for shorter human form
     };
     ProgramPage.prototype.formatDate = function (dateobj) {
@@ -16665,21 +16675,18 @@ var ProgramPage = (function () {
         modal.present();
     };
     ProgramPage.prototype.doRefresh = function (refresher) {
-        this.refreshContentData();
-        setTimeout(function () {
+        this.refreshContentData().then(function () {
             refresher.complete();
-        }, 2000);
+        });
     };
-    ProgramPage.prototype.showAllEvents = function () {
-        this.refreshContentData();
-    };
+    // showAllEvents()
     ProgramPage.prototype.scrollTo = function (element_id) {
         var el = document.getElementById(element_id);
         if (el) {
             // el.classList.add('active');
-            // console.log(`Scrolling to ${element_id}`);
+            console.log("Scrolling to " + element_id);
             var yOffset = el.offsetTop;
-            this.content.scrollTo(0, yOffset, 4 * yOffset);
+            this.content.scrollTo(0, yOffset, 500);
             return true;
         }
         else {
@@ -16695,32 +16702,52 @@ var ProgramPage = (function () {
     };
     ProgramPage.prototype.refreshContentData = function () {
         var _this = this;
-        this.posts = [];
-        var myTracks = this.acp.getTracks();
-        this.cntProvider.getEventsForTracks(myTracks).then(function (events) {
-            _this.posts = events;
-            // if (this.autoScroll) {
-            setTimeout(function () {
-                var foundEvent = false;
-                events.forEach(function (event) {
-                    if (!foundEvent) {
-                        // If active event, scroll to it.
-                        if (_this.eventIsCurrentlyActive(event)) {
-                            // console.log(`${event.title} is currently active.`);
-                            scrollTo(event.fromtime);
-                            foundEvent = true;
-                        }
-                        else if (_this.inTheFuture(event.fromTime)) {
-                            // if event is in the future, scroll to it
-                            // console.log(`${event.title} is currently active.`);
-                            _this.scrollTo(event.fromTime);
-                            foundEvent = true;
-                        }
-                    }
-                });
-            }, 1000);
-            // }
+        var promise = new Promise(function (resolve, reject) {
+            // this.posts = [];
+            var myTracks = _this.acp.getTracks();
+            _this.cntProvider.getEventsForTracks(myTracks).then(function (events) {
+                // if (this.posts.toString() !== events.toString() || this.posts[0] === undefined) {
+                // console.log('this.posts !== events', this.posts.toString() !== events.toString());
+                // console.log('current', this.posts);
+                // console.log('incoming', events);
+                _this.posts = _this.posts === events ? _this.posts : events;
+                // }
+                // console.log(this.posts[0] === undefined);
+                // this.storage.set('programEvents', events).then(r => console.log(`Saved these events to storage:`, r), e => console.log(`Could not save this...`, e));
+                // }
+                resolve();
+                // if (this.autoScroll) {
+                setTimeout(function () {
+                    _this.scrollToRelevantEvent();
+                }, 1000);
+                // }
+            });
         });
+        return promise;
+    };
+    ProgramPage.prototype.scrollToRelevantEvent = function () {
+        var _this = this;
+        console.log('Looking for active event');
+        var foundEvent = false;
+        this.posts.forEach(function (event) {
+            if (!foundEvent) {
+                // If active event, scroll to it.
+                if (_this.eventIsCurrentlyActive(event)) {
+                    console.log(event.title + " is currently active.");
+                    _this.scrollTo(event.fromTime);
+                    foundEvent = true;
+                }
+                else if (_this.inTheFuture(event.fromTime)) {
+                    // if event is in the future, scroll to it
+                    console.log(event.title + " is in the future.");
+                    _this.scrollTo(event.fromTime);
+                    foundEvent = true;
+                }
+            }
+        });
+        if (!foundEvent) {
+            console.log('No event found');
+        }
     };
     return ProgramPage;
 }());
@@ -16730,7 +16757,7 @@ __decorate([
 ], ProgramPage.prototype, "content", void 0);
 ProgramPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-program',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/program/program.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons right>\n\n      <button ion-button icon-only right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title> Åpen Himmel</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <span *ngIf="posts.length.valueOf()== 0">\n    <p padding>Ingen kommende hendelser for øyeblikket.</p>\n    <ion-spinner></ion-spinner>\n  </span>\n  <ion-list>\n    <span *ngFor="let post of posts" [class]="post.arrangement">\n      <ion-item  [id]="post.fromTime" tappable (click)="itemSelected(post)">\n        <ion-avatar item-right *ngIf="post.imgURL">\n          <img src={{post.imgURL}}/>\n        </ion-avatar>\n        <p>\n          <b>{{post.title}}</b>\n          <span *ngIf="post.location"> | {{post.location}}</span>\n        </p>\n        <p>{{post.content}}</p>\n        <span *ngIf="datetimeFirst" item-left class="staticwidth">\n          <!-- *ngIf="inTheFuture(post.fromTime)" -->\n          <span *ngIf="!hideCountdown"> {{momentFromNow(post.fromTime)}}\n            <br>\n          </span>\n          {{formatDate(post.fromTime)}}\n        </span>\n        <span *ngIf="!datetimeFirst" item-right class="staticwidth">\n          <!-- *ngIf="inTheFuture(post.fromTime)" -->\n          <span *ngIf="!hideCountdown"> {{momentFromNow(post.fromTime)}}\n            <br>\n          </span>\n          {{formatDate(post.fromTime)}}\n        </span>\n      </ion-item>\n    </span>\n  </ion-list>\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newEvent()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/program/program.html"*/
+        selector: 'page-program',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/program/program.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons right>\n\n      <button ion-button icon-only right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title> Åpen Himmel</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n        </ion-refresher-content>\n      </ion-refresher>\n\n  <span *ngIf="posts.length.valueOf()== 0">\n    <ion-spinner></ion-spinner>\n  </span>\n  <ion-list>\n    <span *ngFor="let post of posts" [class]="post.arrangement">\n      <ion-item class="border" [id]="post.fromTime" tappable (click)="itemSelected(post)">\n        <ion-avatar item-right *ngIf="post.imgURL">\n          <img src={{post.imgURL}}/>\n        </ion-avatar>\n        <p>\n          <b>{{post.title}}</b>\n          <span *ngIf="post.location"> | {{post.location}}</span>\n        </p>\n        <p>{{post.content}}</p>\n        <span *ngIf="!datetimeLast" item-left class="staticwidth">\n          <!-- *ngIf="inTheFuture(post.fromTime)" -->\n          <span *ngIf="!hideCountdown"> {{momentFromNow(post.fromTime)}}\n            <br>\n          </span>\n          {{formatDate(post.fromTime)}}\n        </span>\n        <span *ngIf="datetimeLast" item-right class="staticwidth">\n          <!-- *ngIf="inTheFuture(post.fromTime)" -->\n          <span *ngIf="!hideCountdown"> {{momentFromNow(post.fromTime)}}\n            <br>\n          </span>\n        </span>\n      </ion-item>\n    </span>\n  </ion-list>\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newEvent()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/program/program.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["q" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["r" /* NavParams */],

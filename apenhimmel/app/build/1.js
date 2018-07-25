@@ -16546,15 +16546,14 @@ webpackContext.id = 585;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(464);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_appconfig_appconfig__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_content_content__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_appconfig_appconfig__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_content_content__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16572,13 +16571,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var NewsPage = (function () {
-    function NewsPage(navCtrl, navParams, storage, http, modalCtr, acp, cntProvider) {
+    function NewsPage(navCtrl, navParams, http, modalCtr, acp, cntProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.storage = storage;
         this.http = http;
         this.modalCtr = modalCtr;
         this.acp = acp;
@@ -16586,22 +16583,30 @@ var NewsPage = (function () {
         this.arrangement = {};
         this.posts = [];
         this.user = {};
-        __WEBPACK_IMPORTED_MODULE_3_moment__["locale"]('nb');
+        __WEBPACK_IMPORTED_MODULE_2_moment__["locale"]('nb');
         this.acp.getArrangement().then(function (mainArrangement) {
             _this.arrangement = mainArrangement;
         });
+        setTimeout(function () {
+            _this.refreshContentData();
+        }, 1000);
     }
     NewsPage.prototype.ionViewWillEnter = function () {
-        this.refreshContentData();
         this.user = this.acp.getUser();
+    };
+    NewsPage.prototype.ionViewDidEnter = function () {
+        this.refreshContentData();
     };
     NewsPage.prototype.refreshContentData = function () {
         var _this = this;
-        var myTracks = this.acp.getTracks();
-        this.cntProvider.getMessagesForTracks(myTracks, "nyhet").then(function (posts) {
-            _this.posts = posts;
-            _this.storage.set('newsData', posts);
+        var promise = new Promise(function (resolve, reject) {
+            var myTracks = _this.acp.getTracks();
+            _this.cntProvider.getMessagesForTracks(myTracks, "nyhet").then(function (posts) {
+                _this.posts = _this.posts === posts ? _this.posts : posts;
+            });
+            resolve();
         });
+        return promise;
     };
     NewsPage.prototype.itemSelected = function (postData) {
         var _this = this;
@@ -16637,13 +16642,12 @@ var NewsPage = (function () {
         modal.present();
     };
     NewsPage.prototype.momentFromNow = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).fromNow();
+        return __WEBPACK_IMPORTED_MODULE_2_moment__(dateobj).fromNow();
     };
     NewsPage.prototype.doRefresh = function (refresher) {
-        this.refreshContentData();
-        setTimeout(function () {
+        this.refreshContentData().then(function () {
             refresher.complete();
-        }, 2000);
+        });
     };
     NewsPage.prototype.choosearrangement = function () {
         var _this = this;
@@ -16657,15 +16661,14 @@ var NewsPage = (function () {
 }());
 NewsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-news',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/news/news.html"*/'<!--\n  News-Page\n  Display the newest info relevant to the attendee\n-->\n\n<ion-header>\n  <ion-navbar>\n    <ion-buttons right>\n      <button ion-button icon-only right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title> Åpen Himmel</ion-title>\n    <!-- <button (click)=\'chooseArrangement()\' ion-button>\n      </button> -->\n    <!-- <ion-buttons right *ngIf="user.admin">\n      <button ion-button (click)=\'newPost()\' ion-button>\n        Ny Post\n      </button>\n    </ion-buttons> -->\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h1 padding>Nyheter</h1>\n\n  <span *ngIf="posts.length.valueOf()== 0">\n    <p padding>Ingen nyheter for øyeblikket.</p>\n    <!-- <p padding>Sjekk nettforbindelse</p> -->\n    <ion-spinner></ion-spinner>\n  </span>\n  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher> -->\n\n  <!-- <ion-item>\n  </ion-item> -->\n\n  <ion-list>\n    <span *ngFor="let post of posts" [class]="post.arrangement">\n      <ion-item class="border" tappable (click)="itemSelected(post)">\n        <ion-thumbnail item-end *ngIf="post.imgURL">\n          <img src={{post.imgURL}}>\n        </ion-thumbnail>\n        <h2 class="BoJoKo" *ngIf="post.arrangement===\'BoJoKo\'"> ||BoJoKo||</h2>\n        <span class="overflow">\n          <h1 class="overflow">{{post.title}}</h1>\n          <h2>{{post.location}}</h2>\n          <p>{{post.content}}</p>\n          <p>{{momentFromNow(post.datetime)}}</p>\n        </span>\n      </ion-item>\n    </span>\n  </ion-list>\n\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newPost()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/news/news.html"*/
+        selector: 'page-news',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/news/news.html"*/'<!--\n  News-Page\n  Display the newest info relevant to the attendee\n-->\n\n<ion-header>\n  <ion-navbar>\n    <ion-buttons right>\n      <button ion-button icon-only right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-title> Åpen Himmel</ion-title>\n    <!-- <button (click)=\'chooseArrangement()\' ion-button>\n      </button> -->\n    <!-- <ion-buttons right *ngIf="user.admin">\n      <button ion-button (click)=\'newPost()\' ion-button>\n        Ny Post\n      </button>\n    </ion-buttons> -->\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h1 padding>Nyheter</h1>\n\n  <span *ngIf="posts.length.valueOf()== 0">\n    <ion-spinner></ion-spinner>\n  </span>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <!-- <ion-item>\n  </ion-item> -->\n\n  <ion-list>\n    <span *ngFor="let post of posts" [class]="post.arrangement">\n      <ion-item class="border" tappable (click)="itemSelected(post)">\n        <ion-thumbnail item-end *ngIf="post.imgURL">\n          <img src={{post.imgURL}}>\n        </ion-thumbnail>\n        <h2 class="BoJoKo" *ngIf="post.arrangement===\'BoJoKo\'"> ||BoJoKo||</h2>\n        <span class="overflow">\n          <h1 class="overflow">{{post.title}}</h1>\n          <h2>{{post.location}}</h2>\n          <p>{{post.content}}</p>\n          <p>{{momentFromNow(post.datetime)}}</p>\n        </span>\n      </ion-item>\n    </span>\n  </ion-list>\n\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newPost()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/news/news.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_7__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
-        __WEBPACK_IMPORTED_MODULE_8__providers_content_content__["a" /* ContentProvider */]])
+        __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_6__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
+        __WEBPACK_IMPORTED_MODULE_7__providers_content_content__["a" /* ContentProvider */]])
 ], NewsPage);
 
 //# sourceMappingURL=news.js.map

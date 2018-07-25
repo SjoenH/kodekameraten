@@ -1,14 +1,13 @@
-webpackJsonp([5],Array(450).concat([
-/* 450 */
+webpackJsonp([5],Array(451).concat([
+/* 451 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventDetailPageModule", function() { return EventDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_detail__ = __webpack_require__(589);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(590);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +17,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var EventDetailPageModule = (function () {
-    function EventDetailPageModule() {
+var HomePageModule = (function () {
+    function HomePageModule() {
     }
-    return EventDetailPageModule;
+    return HomePageModule;
 }());
-EventDetailPageModule = __decorate([
+HomePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__event_detail__["a" /* EventDetailPage */]), __WEBPACK_IMPORTED_MODULE_3_ionic_img_viewer__["b" /* IonicImageViewerModule */]]
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]
+        ]
     })
-], EventDetailPageModule);
+], HomePageModule);
 
-//# sourceMappingURL=event-detail.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ }),
-/* 451 */,
 /* 452 */,
 /* 453 */,
 /* 454 */,
@@ -16541,20 +16545,22 @@ webpackContext.id = 585;
 /* 586 */,
 /* 587 */,
 /* 588 */,
-/* 589 */
+/* 589 */,
+/* 590 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(464);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_navigation_view_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__ = __webpack_require__(260);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_content_content__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -16576,151 +16582,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EventDetailPage = (function () {
-    function EventDetailPage(navCtrl, navParams, viewCtrl, modalCtr, storage, http, imageViewerCtrl, acp, cntProvider) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.modalCtr = modalCtr;
-        this.storage = storage;
-        this.http = http;
-        this.imageViewerCtrl = imageViewerCtrl;
-        this.acp = acp;
-        this.cntProvider = cntProvider;
-        this.team = [];
-        this.events = [];
-        this.seminars = [];
-        this.data = {};
-        this.user = { admin: false };
-        __WEBPACK_IMPORTED_MODULE_3_moment__["locale"]('nb');
-        this.user = this.acp.getUser();
-        this.data = this.navParams.get('eventData');
-    }
-    EventDetailPage.prototype.momentFromNow = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).fromNow();
-    };
-    EventDetailPage.prototype.ionViewDidEnter = function () {
-        if (this.data.refMessageCategory) {
-            this.getSeminars();
-        }
-        if (this.data.refEventCategory) {
-            this.getEvents();
-        }
-        if (this.data.refPerson) {
-            this.getTeam();
-        }
-    };
-    EventDetailPage.prototype.edit = function () {
+var HomePage = (function () {
+    function HomePage(navCtrl, http, modalCtr, viewCtrl, apc, storage, cntProvider) {
         var _this = this;
-        var modal = this.modalCtr.create('EventCreatorPage', {
-            eventData: this.data
+        this.navCtrl = navCtrl;
+        this.http = http;
+        this.modalCtr = modalCtr;
+        this.viewCtrl = viewCtrl;
+        this.apc = apc;
+        this.storage = storage;
+        this.cntProvider = cntProvider;
+        this.user = {};
+        this.arrangements = [];
+        __WEBPACK_IMPORTED_MODULE_3_moment___default.a.locale('nb');
+        this.storage.get('uid').then(function (uid) {
+            _this.user.uid = uid;
         });
-        modal.onDidDismiss(function (updatedData) {
-            if (updatedData) {
-                if (updatedData.delete === true) {
-                    _this.cntProvider.deleteEvent(updatedData);
-                    _this.viewCtrl.dismiss({ refresh: true });
-                }
-                else {
-                    _this.data = updatedData;
-                    _this.cntProvider.updateEvent(updatedData);
-                }
-            }
+        this.cntProvider.getArrangements().then(function (data) {
+            _this.arrangements = data;
         });
-        modal.present();
+    }
+    HomePage.prototype.momentFromNow = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment___default()(dateobj).fromNow();
     };
-    EventDetailPage.prototype.close = function () {
+    HomePage.prototype.formatDate = function (dateobj) {
+        return __WEBPACK_IMPORTED_MODULE_3_moment___default()(dateobj).format('dddd, Do MMM YYYY');
+    };
+    HomePage.prototype.clickHandler = function (arrangement) {
+        this.apc.setarrangement(arrangement);
+        this.storage.set('arrangement', arrangement);
+        this.apc.mainTrack = arrangement;
+        this.close();
+    };
+    HomePage.prototype.showTutorial = function () {
+        var modal = this.modalCtr.create('TutorialPage');
+        modal.present();
+        this.close();
+    };
+    HomePage.prototype.close = function () {
         this.viewCtrl.dismiss();
     };
-    EventDetailPage.prototype.onClick = function (imageToView) {
-        var viewer = this.imageViewerCtrl.create(imageToView);
-        viewer.present();
+    HomePage.prototype.login = function () {
+        this.navCtrl.push('LoginPage');
     };
-    EventDetailPage.prototype.dateFromNow = function (date) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment__(date).fromNow();
+    HomePage.prototype.gotoUserPage = function () {
+        this.navCtrl.push('SettingsPage');
     };
-    EventDetailPage.prototype.formatDate = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).format('DD/MM HH:mm');
-    };
-    EventDetailPage.prototype.formatOnlyTime = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_3_moment__(dateobj).format('HH:mm');
-    };
-    EventDetailPage.prototype.getSeminars = function () {
-        var _this = this;
-        this.storage.get('arrangement').then(function (arrangement) {
-            _this.cntProvider
-                .getMessagesForArrangementWithCategory(arrangement, _this.data.refMessageCategory)
-                .then(function (posts) {
-                _this.seminars = [];
-                for (var key in posts) {
-                    if (posts.hasOwnProperty(key)) {
-                        _this.seminars.push(posts[key]);
-                    }
-                }
-            });
-        });
-    };
-    EventDetailPage.prototype.getEvents = function () {
-        var _this = this;
-        this.storage.get('arrangement').then(function (arrangement) {
-            _this.cntProvider
-                .getEventsForArrangementWithCategory(arrangement, _this.data.refEventCategory)
-                .then(function (posts) {
-                _this.events = [];
-                for (var key in posts) {
-                    if (posts.hasOwnProperty(key)) {
-                        _this.events.push(posts[key]);
-                    }
-                }
-            });
-        });
-    };
-    EventDetailPage.prototype.getTeam = function () {
-        var _this = this;
-        this.cntProvider.getTeam(this.data.refPerson)
-            .then(function (posts) {
-            _this.team = [];
-            for (var key in posts) {
-                if (posts.hasOwnProperty(key)) {
-                    _this.team.push(posts[key]);
-                }
-            }
-        });
-    };
-    EventDetailPage.prototype.messageSelected = function (postData) {
-        var modal = this.modalCtr.create('NewsDetailPage', { postData: postData });
-        // modal.onDidDismiss(something => {
-        // });
-        modal.present();
-    };
-    EventDetailPage.prototype.eventSelected = function (eventData) {
-        var modal = this.modalCtr.create('EventDetailPage', { eventData: eventData });
-        // modal.onDidDismiss(something => {
-        // });
-        modal.present();
-    };
-    EventDetailPage.prototype.personSelected = function (personData) {
-        var modal = this.modalCtr.create('PersonDetailPage', { personData: personData });
-        modal.present();
-    };
-    return EventDetailPage;
+    return HomePage;
 }());
-EventDetailPage = __decorate([
+HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-event-detail',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/event-detail/event-detail.html"*/'<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>newsDetail</ion-title> -->\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons right *ngIf="user.admin">\n      <button ion-button padding color="primary" (click)="edit(data)">\n        <ion-icon name="create"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card class="center">\n    <img src={{data.imgURL}} imageViewer tappable/>\n    <ion-card-header style="white-space: normal;">\n      <h1>{{data.title}}</h1>\n      <p class="align-right">{{data.arrangement}}</p>\n    </ion-card-header>\n    <ion-chip *ngIf="data.location">\n      <ion-icon name="pin"></ion-icon>\n      <ion-label>\n        <h1>{{data.location}}</h1>\n      </ion-label>\n    </ion-chip>\n    <ion-chip *ngIf="data.fromTime">\n      <ion-icon name="clock"></ion-icon>\n      <ion-label>\n        <h1>\n          {{formatDate(data.fromTime)}}\n          <span *ngIf="data.toTime"> - {{formatOnlyTime(data.toTime)}}</span>\n        </h1>\n      </ion-label>\n    </ion-chip>\n    <ion-card-content>\n      <div [innerHTML]="data.content"></div>\n      <!-- {{data.category}} -->\n      <span *ngIf="data.webURL">\n        <hr>\n        <a href="{{data.webURL}}">\n          <button ion-button icon-start full>\n            <ion-icon name="globe" item-left></ion-icon>\n            {{data.webURL}}\n          </button>\n        </a>\n      </span>\n      <span *ngIf="data.tlf">\n        <hr>\n        <a href="tel:{{data.tlf}}">\n          <button ion-button icon-start full>\n            <ion-icon name="call" item-left></ion-icon>\n            {{data.tlf}}\n          </button>\n        </a>\n      </span>\n    </ion-card-content>\n  </ion-card>\n  <ion-card *ngIf="data.refMessageCategory">\n    <!-- <ion-card-header>\n      <h2>\n        Info\n      </h2>\n    </ion-card-header> -->\n    <ion-list>\n      <ion-item *ngFor="let infopage of seminars" tappable (click)="messageSelected(infopage)">\n        <ion-avatar item-left *ngIf="infopage.imgURL">\n          <img src={{infopage.imgURL}}/>\n        </ion-avatar>\n        <h2>{{infopage.title}}</h2>\n        <p>{{infopage.content}}</p>\n        <ion-note item-right>{{momentFromNow(infopage.datetime)}}\n          <br> {{infopage.location}}\n        </ion-note>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n  <ion-card *ngIf="data.refEventCategory">\n    <!-- <ion-card-header>\n      <h2>\n        Hendelser\n      </h2>\n    </ion-card-header> -->\n    <ion-item *ngFor="let event of events" tappable (click)="eventSelected(event)">\n      <ion-avatar item-left *ngIf="event.imgURL">\n        <img src={{event.imgURL}}/>\n      </ion-avatar>\n      <h2>{{event.title}}</h2>\n      <p>{{event.content}}</p>\n      <ion-note item-right>\n        {{momentFromNow(event.fromTime)}}\n        <br> {{formatDate(event.fromTime)}}\n        <span *ngIf="event.toTime">- {{formatOnlyTime(event.toTime)}}</span>\n        <br> {{event.location}}\n      </ion-note>\n    </ion-item>\n  </ion-card>\n  <ion-card *ngIf="data.refPerson">\n    <ion-item *ngFor="let person of team" tappable (click)="personSelected(person)">\n      <ion-avatar item-left *ngIf="person.imgURL">\n        <img src={{person.imgURL}}/>\n      </ion-avatar>\n      <h2>{{person.firstName}} {{person.lastName}}</h2>\n      <p>{{person.about}}</p>\n      <ion-note item-right>\n        <p>{{person.role}}</p>\n      </ion-note>\n    </ion-item>\n  </ion-card>\n</ion-content>\n<!-- firstName: req.body.firstName,\n          lastName: req.body.lastName,\n          role: req.body.role,\n          about: req.body.about,\n          number: req.body.number,\n          email: req.body.email,\n          weblink: req.body.weblink,\n          // OTHER\n          arrangement: req.body.arrangement,\n          channel: req.body.channel,\n          team: req.body.team -->'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/event-detail/event-detail.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n<ion-content class="bg-img" padding>\n  <ion-card>\n    <ion-card-header>\n      <h1>\n        Åpen Himmel\n      </h1>\n    </ion-card-header>\n    <ion-card-content>\n      If app is showing wrong track by any chance... you may try changing it here. No promises\n    </ion-card-content>\n  </ion-card>\n  <ion-card *ngFor="let arrangement of arrangements">\n    <ion-item tappable (click)=\'clickHandler(arrangement.title)\'>\n      <ion-thumbnail item-end>\n        <img src={{arrangement.imgURL}}/>\n      </ion-thumbnail>\n      <h1>\n        {{arrangement.title}}\n      </h1>\n      <span>{{momentFromNow(arrangement.fromTime)}}</span>\n      <p>Fra: {{formatDate(arrangement.fromTime)}}</p>\n      <p>Til: {{formatDate(arrangement.toTime)}}</p>\n    </ion-item>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__["a" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__["a" /* ImageViewerController */],
+        __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_7_ionic_angular_navigation_view_controller__["a" /* ViewController */],
         __WEBPACK_IMPORTED_MODULE_8__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_9__providers_content_content__["a" /* ContentProvider */]])
-], EventDetailPage);
+], HomePage);
 
-//# sourceMappingURL=event-detail.js.map
+//# sourceMappingURL=home.js.map
 
 /***/ })
 ]));

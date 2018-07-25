@@ -1,13 +1,13 @@
-webpackJsonp([3],Array(452).concat([
-/* 452 */
+webpackJsonp([3],Array(454).concat([
+/* 454 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoPageModule", function() { return InfoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageCreatorPageModule", function() { return MessageCreatorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__info__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_creator__ = __webpack_require__(593);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17,23 +17,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var InfoPageModule = (function () {
-    function InfoPageModule() {
+var MessageCreatorPageModule = (function () {
+    function MessageCreatorPageModule() {
     }
-    return InfoPageModule;
+    return MessageCreatorPageModule;
 }());
-InfoPageModule = __decorate([
+MessageCreatorPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [__WEBPACK_IMPORTED_MODULE_2__info__["a" /* InfoPage */]],
-        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__info__["a" /* InfoPage */])]
+        declarations: [__WEBPACK_IMPORTED_MODULE_2__message_creator__["a" /* MessageCreatorPage */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__message_creator__["a" /* MessageCreatorPage */])]
     })
-], InfoPageModule);
+], MessageCreatorPageModule);
 
-//# sourceMappingURL=info.module.js.map
+//# sourceMappingURL=message-creator.module.js.map
 
 /***/ }),
-/* 453 */,
-/* 454 */,
 /* 455 */,
 /* 456 */,
 /* 457 */,
@@ -16539,21 +16537,20 @@ webpackContext.id = 585;
 /* 588 */,
 /* 589 */,
 /* 590 */,
-/* 591 */
+/* 591 */,
+/* 592 */,
+/* 593 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageCreatorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(464);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_appconfig_appconfig__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_content_content__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_alert_alert_controller__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_content_content__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16569,95 +16566,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var InfoPage = (function () {
-    function InfoPage(navCtrl, navParams, modalCtr, acp, cntProvider, storage) {
+var MessageCreatorPage = (function () {
+    function MessageCreatorPage(navCtrl, navParams, viewCtrl, alertCtrl, cntProvider) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.modalCtr = modalCtr;
-        this.acp = acp;
+        this.viewCtrl = viewCtrl;
+        this.alertCtrl = alertCtrl;
         this.cntProvider = cntProvider;
-        this.storage = storage;
-        this.posts = [];
-        this.user = {};
-        this.arrangement = 'Felles';
-        __WEBPACK_IMPORTED_MODULE_2_moment__["locale"]('nb');
+        this.arrangements = [];
+        __WEBPACK_IMPORTED_MODULE_5_moment__["locale"]('nb');
+        this.postData = navParams.get('postData');
+        this.cntProvider.getArrangements().then(function (data) {
+            _this.arrangements = data;
+        });
+        this.datetime = __WEBPACK_IMPORTED_MODULE_5_moment__(this.postData.datetime).format();
+        console.log(this.postData);
     }
-    InfoPage.prototype.ionViewDidEnter = function () {
-        this.refreshContentData();
-        this.user = this.acp.getUser();
+    MessageCreatorPage.prototype.close = function () {
+        this.viewCtrl.dismiss();
     };
-    InfoPage.prototype.showSettings = function () {
+    MessageCreatorPage.prototype.saveChanges = function () {
+        this.postData.datetime = this.datetime;
+        console.log(this.postData);
+        this.viewCtrl.dismiss(this.postData);
+    };
+    MessageCreatorPage.prototype.delete = function () {
         var _this = this;
-        var modal = this.modalCtr.create('SettingsPage');
-        modal.present();
-        modal.onDidDismiss(function () {
-            _this.refreshContentData();
+        var alert = this.alertCtrl.create({
+            title: 'Delete message?',
+            message: 'Er du helt sikker?',
+            buttons: [
+                {
+                    text: 'Behold',
+                    handler: function () {
+                        return;
+                    }
+                },
+                {
+                    text: 'Slett',
+                    handler: function () {
+                        _this.postData.delete = true;
+                        _this.viewCtrl.dismiss(_this.postData);
+                        return;
+                    }
+                }
+            ]
         });
+        alert.present();
     };
-    InfoPage.prototype.itemSelected = function (postData) {
-        var _this = this;
-        var modal = this.modalCtr.create('NewsDetailPage', { postData: postData });
-        modal.onDidDismiss(function (res) {
-            if (res && res.refresh)
-                _this.refreshContentData();
-        });
-        modal.present();
-    };
-    InfoPage.prototype.choosearrangement = function () {
-        var _this = this;
-        var modal = this.modalCtr.create('SettingsPage');
-        modal.present();
-        modal.onDidDismiss(function () {
-            _this.refreshContentData();
-        });
-    };
-    InfoPage.prototype.newPost = function () {
-        var _this = this;
-        var postData = {
-            datetime: new Date().toISOString(),
-            arrangement: "" + this.arrangement,
-            category: 'info',
-        };
-        var modal = this.modalCtr.create('MessageCreatorPage', { postData: postData });
-        modal.onDidDismiss(function (newPostData) {
-            if (newPostData) {
-                _this.cntProvider.postMessage(newPostData);
-                _this.refreshContentData();
-            }
-        });
-        modal.present();
-    };
-    InfoPage.prototype.momentFromNow = function (dateobj) {
-        return __WEBPACK_IMPORTED_MODULE_2_moment__(dateobj).fromNow();
-    };
-    InfoPage.prototype.formatDate = function (date) {
-        return __WEBPACK_IMPORTED_MODULE_2_moment__(date, 'YYYYMMDD').fromNow();
-    };
-    InfoPage.prototype.refreshContentData = function () {
-        var _this = this;
-        var myTracks = this.acp.getTracks();
-        this.cntProvider.getMessagesForTracks(myTracks, "info").then(function (posts) {
-            _this.posts = posts;
-            _this.storage.set('infoData', posts);
-        });
-    };
-    return InfoPage;
+    return MessageCreatorPage;
 }());
-InfoPage = __decorate([
+MessageCreatorPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-info',template:/*ion-inline-start:"/home/henry/Documents/Oase/Oase-App/src/pages/info/info.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>\n      Åpen Himmel\n    </ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only small right padding (click)="showSettings()">\n        <ion-icon name="settings"></ion-icon>\n      </button>\n      <!-- <button *ngIf="user.admin" ion-button (click)=\'newPost()\' ion-button>\n        Ny Post\n      </button> -->\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n  <h1 padding>Informasjon</h1>\n  <span *ngIf="posts.length.valueOf()== 0">\n    <p padding>Ingen info for øyeblikket.</p>\n    <!-- <p padding>Sjekk nettforbindelse</p> -->\n    <ion-spinner></ion-spinner>\n  </span>\n  <!-- <p>Her kommer det til å stå noe kjapp info som er viktig å få med seg.</p> -->\n  <!-- <p>Dersom det er noe mer som tar stor plass å forklare kan vi legge det på en egen underside.</p> -->\n\n\n  <ion-list>\n    <span *ngFor="let infopage of posts" [class]="infopage.arrangement">\n      <ion-item class="border" tappable (click)="itemSelected(infopage)">\n        <ion-avatar item-right *ngIf="infopage.imgURL">\n          <img src="{{infopage.imgURL}}">\n        </ion-avatar>\n        <h2 class="BoJoKo" *ngIf="infopage.arrangement===\'BoJoKo\'"> ||BoJoKo||</h2>\n        <h2>{{infopage.title}}</h2>\n        <p>{{infopage.content}}</p>\n        <ion-note>{{infopage.location}}</ion-note>\n        <!-- <ion-note item-right>{{formatDate(infopage.datetime)}}</ion-note> -->\n      </ion-item>\n    </span>\n  </ion-list>\n\n  <ion-fab *ngIf="user.admin" right bottom padding>\n    <button ion-fab color="primary" (click)=\'newPost()\'>\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n\n</ion-content>'/*ion-inline-end:"/home/henry/Documents/Oase/Oase-App/src/pages/info/info.html"*/
+        selector: 'page-message-creator',template:/*ion-inline-start:"/home/henry/Documents/GitHub/festivus/src/pages/message-creator/message-creator.html"*/'<!--\n  Generated template for the MessageCreatorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button padding (click)="close()">\n        <ion-icon name="arrow-back"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons right>\n      <button large ion-button padding (click)="saveChanges()">\n        <ion-icon name="checkmark"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <p>MessageCreator</p>\n  <ion-list>\n    <ion-item>\n      <!-- title: String, -->\n      <ion-label stacked>Title*</ion-label>\n      <ion-input type="text" value="" [(ngModel)]="postData.title"></ion-input>\n    </ion-item>\n    <ion-item>\n      <!-- content: String, -->\n      <ion-label stacked>Content*</ion-label>\n      <ion-textarea [(ngModel)]="postData.content"></ion-textarea>\n    </ion-item>\n    <ion-item>\n      <!-- imgURL: String, -->\n      <ion-label stacked>imgURL</ion-label>\n      <ion-input type="text" [(ngModel)]="postData.imgURL" placeholder="http://via.placeholder.com/350x250"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <!-- category: Array, //info eller nyhet -->\n      <ion-label>Kategori*</ion-label>\n      <!-- <ion-select [(ngModel)]="postData.category">\n        <ion-option value="nyhet">Nyhet</ion-option>\n        <ion-option value="info">Info</ion-option>\n      </ion-select> -->\n      <ion-input type="text" [(ngModel)]="postData.category" placeholder=""></ion-input>\n    </ion-item>\n\n    <!-- datetime: Date, -->\n    <ion-item>\n      <ion-label>Date</ion-label>\n      <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="datetime"></ion-datetime>\n    </ion-item>\n    <ion-item *ngIf="!postData._id">\n      <ion-label>Push-notifikasjon</ion-label>\n      <ion-toggle [(ngModel)]="postData.sendPush"></ion-toggle>\n    </ion-item>\n    <ion-item>\n      <ion-label>Spor*</ion-label>\n      <ion-select [(ngModel)]="postData.arrangement">\n        <ion-option *ngFor="let arrangement of arrangements" value={{arrangement.title}}>{{arrangement.title}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n  <!-- value: Number, //To weight the importance of info, eg. to be used in sorting -->\n  <!-- ////ACTIONS -->\n\n  <p>Ekstra</p>\n  <ion-item>\n    <!-- location: String, -->\n    <ion-label stacked>Sted</ion-label>\n    <ion-input type="text" value="" [(ngModel)]="postData.location"></ion-input>\n  </ion-item>\n  <ion-item>\n    <!-- weblink: String, -->\n    <ion-label stacked>WebLink</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.weblink" placeholder="http://impulsweb.no"></ion-input>\n  </ion-item>\n  <ion-item>\n    <!-- tlf: String, -->\n    <ion-label stacked>Telefonnummer</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.tlf" placeholder="0047 984 36 185"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Show Messages with category</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.refMessageCategory" placeholder=""></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Show Events with category</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.refEventCategory" placeholder=""></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Show Team</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.refPerson" placeholder=""></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Channel</ion-label>\n    <ion-input type="text" [(ngModel)]="postData.channel" placeholder=""></ion-input>\n  </ion-item>\n  <ion-item>\n    <button ion-button color="danger" *ngIf="postData._id" (click)="delete()" full>Delete message</button>\n  </ion-item>\n\n</ion-content>\n<!--MESSAGE\n      title: String,\n        content: String,\n        datetime: Date,\n        imgURL: String,\n        arrangement: String, //Arrangement "group" for all events,messages etc...\n        category: String, //info eller nyhet\n        channel: String, //VoksenOase, TenOase, BoJoKo etc...\n        refMessageCategory: String,\n        refEventCategory: String,\n        location: String,\n        sendPush: Boolean,\n        //ACTIONS\n        weblink: String,\n        tlf: String,\n        refPerson: String // For eksempel team1-->\n'/*ion-inline-end:"/home/henry/Documents/GitHub/festivus/src/pages/message-creator/message-creator.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_modal_modal_controller__["a" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_appconfig_appconfig__["a" /* AppConfigProvider */],
-        __WEBPACK_IMPORTED_MODULE_6__providers_content_content__["a" /* ContentProvider */],
-        __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */]])
-], InfoPage);
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular_navigation_view_controller__["a" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_alert_alert_controller__["a" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_content_content__["a" /* ContentProvider */]])
+], MessageCreatorPage);
 
-//# sourceMappingURL=info.js.map
+//# sourceMappingURL=message-creator.js.map
 
 /***/ })
 ]));
