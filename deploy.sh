@@ -7,7 +7,7 @@ hugo -t terminal # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 # cd public
-mv public/* .
+cp -r public/* .
 rm -rf public
 
 # Add changes to git.
