@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kodekameraten | Henry S. Sjøen</title>
-    <link>https://example.com/</link>
+    <link>http://kodekameraten.no/</link>
     <description>Recent content on Kodekameraten | Henry S. Sjøen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
     <copyright>© 2019 Henry S. Sjøen</copyright>
     <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kodekameraten.no/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello World!</title>
-      <link>https://example.com/post/hello/</link>
+      <link>http://kodekameraten.no/post/hello/</link>
       <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/hello/</guid>
+      <guid>http://kodekameraten.no/post/hello/</guid>
       <description>Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside.
 Kort om meg Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.</description>
     </item>
     
     <item>
       <title>Om meg</title>
-      <link>https://example.com/about/</link>
+      <link>http://kodekameraten.no/about/</link>
       <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>http://kodekameraten.no/about/</guid>
       <description>Hei! Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
 Ved siden av studiet har jeg; Utviklet og lansert over 5 apper for iOS, Android og Web.</description>
     </item>
