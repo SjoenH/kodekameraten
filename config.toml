@@ -1,4 +1,4 @@
-baseurl = "https://example.com/"
+baseurl = "https://kodekameraten.no/"
 languageCode = "nb-no"
 DefaultContentLanguage = "nb-no"
 theme = "hugo-theme-terminal"
