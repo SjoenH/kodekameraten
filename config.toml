@@ -1,0 +1,31 @@
+baseurl = "https://example.com/"
+languageCode = "nb-no"
+DefaultContentLanguage = "nb-no"
+theme = "hugo-theme-terminal"
+paginate = 5
+copyright = "Everything is mine"
+
+[params]
+  contentTypeName = "post"
+  themeColor = "green"
+  showMenuItems = 2
+
+[languages]
+  [languages.nb-no]
+    title = "Kodekameraten | Henry S. Sjøen"
+    subtitle = ""
+    keywords = ""
+    copyright = "© 2019 Henry S. Sjøen"
+    menuMore = "Vis mer"
+    readMore = "Les mer"
+    readOtherPosts = "Les andre poster"
+
+    [languages.nb-no.params.logo]
+      logoText = "K0d3kameraten"
+      logoHomeLink = "/"
+
+    [languages.nb-no.menu]
+      [[languages.nb-no.menu.main]]
+        identifier = "Om meg"
+        name = "Hvem er Kodekameraten?"
+        url = "/about"
