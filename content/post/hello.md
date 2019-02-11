@@ -8,7 +8,7 @@ description : "Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i
 
 Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside.
 
-# Kort om meg
+# Kort om Kodekameraten
 Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de gode opplevelsene.
 Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. 
 Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
