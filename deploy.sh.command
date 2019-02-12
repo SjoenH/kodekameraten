@@ -23,7 +23,7 @@ fi
 git commit -m "$msg"
 
 # Push to GitHub.
-echo -e "\n\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e "\n\033[0;32mDeploying updates to GitHub...\033[0m\n"
 git push origin master
 
 echo -e "\n\033[0;32mFinished procedure.\t\tGoodbye!\033[0m"
