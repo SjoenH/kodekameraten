@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /Users/henry/git/kodekameraten
+# cd /Users/henry/git/kodekameraten
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 

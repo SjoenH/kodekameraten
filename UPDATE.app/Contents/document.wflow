@@ -59,7 +59,8 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>/Users/henry/git/kodekameraten/deploy.sh</string>
+					<string>cd /Users/henry/git/kodekameraten/
+./deploy.sh</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -351,7 +352,7 @@
 					<key>subtitle</key>
 					<string></string>
 					<key>title</key>
-					<string>$(632AEF43-9E9D-45EC-B2FC-73353753CEE7)</string>
+					<string>Done!</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Display-Notification</string>
