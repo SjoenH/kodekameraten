@@ -176,7 +176,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>769.000000:432.000000</string>
+				<string>769.000000:304.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -204,7 +204,12 @@
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>message</key>
-					<dict/>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>$1</string>
+						</array>
+					</dict>
 					<key>subtitle</key>
 					<dict/>
 					<key>title</key>
@@ -318,7 +323,7 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>E75B0785-9D29-4DC1-A8C8-CC01DD9DFD1B</key>
+		<key>EF26494A-C851-4E1F-857D-1AB10C437919</key>
 		<dict>
 			<key>from</key>
 			<string>8BBC02AF-906F-478E-8F30-1114B0EAE2A4 - 8BBC02AF-906F-478E-8F30-1114B0EAE2A4</string>
