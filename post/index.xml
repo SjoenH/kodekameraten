@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
     <copyright>© 2019 Henry S. Sjøen</copyright>
-    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://kodekameraten.no/post/ansatt/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kodekameraten.no/post/ansatt/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hello World!</title>
