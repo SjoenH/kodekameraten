@@ -22,5 +22,4 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-msg = $(git push origin master)
-echo "${msg}"
+git push origin master
