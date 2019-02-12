@@ -6,6 +6,7 @@ paginate = 5
 copyright = "Everything is mine"
 
 [params]
+  author = "Henry S. Sjøen"
   contentTypeName = "post"
   themeColor = "green"
   showMenuItems = 2
