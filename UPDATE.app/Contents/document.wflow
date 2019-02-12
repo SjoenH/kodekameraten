@@ -193,37 +193,52 @@
 					<key>Optional</key>
 					<true/>
 					<key>Types</key>
-					<array>
-						<string>*</string>
-					</array>
+					<array/>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.2</string>
+				<string>1.0</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
 				</array>
 				<key>AMParameterProperties</key>
-				<dict/>
+				<dict>
+					<key>message</key>
+					<dict/>
+					<key>subtitle</key>
+					<dict/>
+					<key>title</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Finished</string>
+						</array>
+					</dict>
+				</dict>
 				<key>AMProvides</key>
 				<dict>
 					<key>Container</key>
 					<string>List</string>
 					<key>Types</key>
-					<array>
-						<string>*</string>
-					</array>
+					<array/>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/View Results.action</string>
+				<string>/System/Library/Automator/Display Notification.action</string>
 				<key>ActionName</key>
-				<string>View Results</string>
+				<string>Display Notification</string>
 				<key>ActionParameters</key>
-				<dict/>
+				<dict>
+					<key>message</key>
+					<string></string>
+					<key>subtitle</key>
+					<string></string>
+					<key>title</key>
+					<string></string>
+				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.LogOutput</string>
+				<string>com.apple.Automator.Display-Notification</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.2</string>
+				<string>1.0</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<true/>
 				<key>CanShowWhenRun</key>
@@ -233,34 +248,69 @@
 					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>LogOutputAction</string>
+				<string>AMDisplayNotificationAction</string>
 				<key>InputUUID</key>
-				<string>9C0F89DA-B421-47E6-8A80-D62AA28B23DF</string>
+				<string>54BDF2F9-CCC3-4F96-9122-2BE050538039</string>
 				<key>Keywords</key>
-				<array>
-					<string>Display</string>
-					<string>Show</string>
-					<string>Log</string>
-					<string>Output</string>
-				</array>
+				<array/>
 				<key>OutputUUID</key>
-				<string>C8CF1EB8-8794-4794-AD4A-D3E727C3AC00</string>
+				<string>79E853A9-E5AD-47E7-A0C8-A016C079E3FA</string>
 				<key>UUID</key>
-				<string>BE1A2BCA-B318-4934-89CC-500C74DC203F</string>
+				<string>D450FEAE-14D9-45DC-924C-F73ECB47D57D</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
 				</array>
 				<key>arguments</key>
-				<dict/>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>subtitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>title</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>message</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
 				<key>conversionLabel</key>
 				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>769.000000:612.000000</string>
+				<string>769.000000:673.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/View Results.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -268,12 +318,12 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>CE8D30A4-7AF6-4172-9BBC-9040097BD158</key>
+		<key>E75B0785-9D29-4DC1-A8C8-CC01DD9DFD1B</key>
 		<dict>
 			<key>from</key>
 			<string>8BBC02AF-906F-478E-8F30-1114B0EAE2A4 - 8BBC02AF-906F-478E-8F30-1114B0EAE2A4</string>
 			<key>to</key>
-			<string>BE1A2BCA-B318-4934-89CC-500C74DC203F - BE1A2BCA-B318-4934-89CC-500C74DC203F</string>
+			<string>D450FEAE-14D9-45DC-924C-F73ECB47D57D - D450FEAE-14D9-45DC-924C-F73ECB47D57D</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
