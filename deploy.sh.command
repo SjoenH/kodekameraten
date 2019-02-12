@@ -26,4 +26,4 @@ git commit -m "$msg"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 git push origin master
 
-echo -e "\033[0;32mFinished procedure\nBYE!\033[0m"
+echo -e "\033[0;32mFinished procedure\t\t\tGoodbye!\033[0m"
