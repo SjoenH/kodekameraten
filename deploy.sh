@@ -23,7 +23,7 @@ git commit -m "$msg"
 echo "${msg}"
 
 # Push source and build repos.
-echo git push origin master
+git push origin master
 
 # Come Back up to the Project Root
 cd ..
