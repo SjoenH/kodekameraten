@@ -177,7 +177,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>289.000000:304.000000</string>
+				<string>289.000000:432.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -287,7 +287,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>289.000000:409.000000</string>
+				<string>289.000000:537.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -427,7 +427,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>289.000000:778.000000</string>
+				<string>289.000000:906.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
