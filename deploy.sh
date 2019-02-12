@@ -23,7 +23,5 @@ git commit -m "$msg"
 echo "${msg}"
 
 # Push source and build repos.
-git push origin master
-
-# Come Back up to the Project Root
-cd ..
+msg = $(git push origin master)
+echo "${msg}"
