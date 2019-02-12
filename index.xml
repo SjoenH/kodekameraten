@@ -7,18 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
     <copyright>© 2019 Henry S. Sjøen</copyright>
-    <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Feb 2019 09:46:22 +0100</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello World!</title>
-      <link>http://kodekameraten.no/post/ansatt/</link>
-      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      <title>Olavstoppen 01.04.2019</title>
+      <link>http://kodekameraten.no/post/olavstoppen/</link>
+      <pubDate>Tue, 12 Feb 2019 09:46:22 +0100</pubDate>
       
-      <guid>http://kodekameraten.no/post/ansatt/</guid>
-      <description></description>
+      <guid>http://kodekameraten.no/post/olavstoppen/</guid>
+      <description>Kodekameraten har fått seg jobb i Olavstoppen! Den 1. April (ingen spøk) starter jeg i 100% stilling som utvikler i Olavstoppen, Stavanger.
+Olavstoppen er et datterselskap til Bouvet og har spisset kompetanse på digitale brukeropplevelser.
+Sammen med 39 andre ansatte skal jeg jobbe med å finne de gode løsningene. Jeg gleder meg!</description>
     </item>
     
     <item>
@@ -28,7 +30,7 @@
       
       <guid>http://kodekameraten.no/post/hello/</guid>
       <description>Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside.
-Kort om meg Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.</description>
+Kort om meg Jeg er en nysgjerrig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.</description>
     </item>
     
     <item>
@@ -37,7 +39,7 @@ Kort om meg Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de god
       <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>http://kodekameraten.no/about/</guid>
-      <description>Hei! Jeg er en hyggelig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
+      <description>Hei! Jeg er en hyggelig og nysgjerrig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
 Ved siden av studiet har jeg; Utviklet og lansert over 5 apper for iOS, Android og Web.</description>
     </item>
     
