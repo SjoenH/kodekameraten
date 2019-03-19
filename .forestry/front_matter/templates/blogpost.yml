@@ -5,12 +5,15 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
 - type: text
   name: author
   label: author
+  default: Henry S. Sjøen
 - type: file
   name: cover
   label: cover
