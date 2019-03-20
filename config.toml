@@ -1,15 +1,22 @@
 baseurl = "http://kodekameraten.no/"
 languageCode = "nb-no"
 DefaultContentLanguage = "nb-no"
-theme = "hello-friend"
+theme = "terminal"
 paginate = 5
 
 [params]
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "post"
-  # "light" or "dark"
-  defaultTheme = "light"
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+  # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
+  # set theme to full screen width
+  fullWidthTheme = true
+  # center theme with default width
+  centerTheme = true
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
 
 [languages]
   [languages.nb-no]
