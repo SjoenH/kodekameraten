@@ -6,7 +6,7 @@ cd "`dirname "$0"`"
 echo -e "\n\033[0;32mBuilding with Hugo\033[0m"
 
 # Build the project.
-hugo -t terminal # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Move content from public folder into root.
 cp -r public/* .
