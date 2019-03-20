@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kodekameraten | Henry S. Sjøen</title>
+    <title>K0d3kameraten</title>
     <link>http://kodekameraten.no/</link>
-    <description>Recent content on Kodekameraten | Henry S. Sjøen</description>
+    <description>Recent content on K0d3kameraten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
-    <copyright>© 2019 Henry S. Sjøen</copyright>
-    <lastBuildDate>Tue, 12 Feb 2019 09:46:22 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 11:59:32 +0100</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chordpro</title>
+      <link>http://kodekameraten.no/hidden/chordpro/</link>
+      <pubDate>Tue, 12 Mar 2019 11:59:32 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/chordpro/</guid>
+      <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
+Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
+App-er? Det er mange programmer som støtter å vise chordpro-notering.
+OnSong https://onsongapp.com/
+Installasjon Se https://www.chordpro.org for hjelp til installasjon.
+Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m Sorry</title>
+      <link>http://kodekameraten.no/hidden/howtomac/</link>
+      <pubDate>Tue, 12 Mar 2019 10:12:21 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/howtomac/</guid>
+      <description>I vennekretsen min er jeg kjent som den som har oversikt om hva som finnes av programmer og ulike løsninger. Her er en liste over programmer som jeg ofte bruker.
+ Pakkehåndtering  Homebrew  Vindushåndtering  Spectacle Amethyst  Nettlesere  Firefox Plugins/Add-Ons/Extensions  Passordhåndtering MedieAvspilling  iina Spotify ZSH Spark GitKraken Appcleaner Gemini 2 GrandPerspective Musikk Ableton Splice  Synkronisering og deling av data  Resilio Sync Pros &amp;amp; Cons  Akkordnotering  Chordpro Installasjon Generere sanger i alle tonearter   Pakkehåndtering Homebrew Homebrew er det første jeg anbefaler å installere på en ny maskin.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1: Introduction and Proofs</title>
+      <link>http://kodekameraten.no/math/l1/</link>
+      <pubDate>Tue, 19 Feb 2019 10:00:38 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/math/l1/</guid>
+      <description>MIT | Lecture 1: Introduction and Proofs
+Video clip from The Colbert Report 
+ A mathematical prooof is a verification of a proposition by a chain of logical deductions from a set of axioms.
+ $ a=95,800
+b=217,519
+c=414,560
+d=422,481$
+$\exists a,b,c,d \in N^+, a^4+b^4+c^4=d^4$
+There exists a combination of numbers a, b, c and d so that the sum of $a^4,b^4$ and $c^4$ equals $d^4$.
+Predicate: is a proposition whose truth depends on the value of a variable.</description>
+    </item>
     
     <item>
       <title>Olavstoppen 01.04.2019</title>
@@ -41,6 +82,15 @@ Kort om meg Jeg er en nysgjerrig, nyutdannet informatiker med et hjerte for de g
       <guid>http://kodekameraten.no/about/</guid>
       <description>Hei! Jeg er en hyggelig og nysgjerrig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
 Ved siden av studiet har jeg; Utviklet og lansert over 5 apper for iOS, Android og Web.</description>
+    </item>
+    
+    <item>
+      <title>Showcase</title>
+      <link>http://kodekameraten.no/showcase/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kodekameraten.no/showcase/</guid>
+      <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
     </item>
     
   </channel>

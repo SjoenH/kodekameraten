@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on K0d3kameraten</title>
+    <link>http://kodekameraten.no/math/</link>
+    <description>Recent content in Maths on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Tue, 19 Feb 2019 10:00:38 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lecture 1: Introduction and Proofs</title>
+      <link>http://kodekameraten.no/math/l1/</link>
+      <pubDate>Tue, 19 Feb 2019 10:00:38 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/math/l1/</guid>
+      <description>MIT | Lecture 1: Introduction and Proofs
+Video clip from The Colbert Report 
+ A mathematical prooof is a verification of a proposition by a chain of logical deductions from a set of axioms.
+ $ a=95,800
+b=217,519
+c=414,560
+d=422,481$
+$\exists a,b,c,d \in N^+, a^4+b^4+c^4=d^4$
+There exists a combination of numbers a, b, c and d so that the sum of $a^4,b^4$ and $c^4$ equals $d^4$.
+Predicate: is a proposition whose truth depends on the value of a variable.</description>
+    </item>
+    
+  </channel>
+</rss>

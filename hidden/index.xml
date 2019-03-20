@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiddens on K0d3kameraten</title>
+    <link>http://kodekameraten.no/hidden/</link>
+    <description>Recent content in Hiddens on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Tue, 12 Mar 2019 11:59:32 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/hidden/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chordpro</title>
+      <link>http://kodekameraten.no/hidden/chordpro/</link>
+      <pubDate>Tue, 12 Mar 2019 11:59:32 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/chordpro/</guid>
+      <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
+Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
+App-er? Det er mange programmer som støtter å vise chordpro-notering.
+OnSong https://onsongapp.com/
+Installasjon Se https://www.chordpro.org for hjelp til installasjon.
+Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m Sorry</title>
+      <link>http://kodekameraten.no/hidden/howtomac/</link>
+      <pubDate>Tue, 12 Mar 2019 10:12:21 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/howtomac/</guid>
+      <description>I vennekretsen min er jeg kjent som den som har oversikt om hva som finnes av programmer og ulike løsninger. Her er en liste over programmer som jeg ofte bruker.
+ Pakkehåndtering  Homebrew  Vindushåndtering  Spectacle Amethyst  Nettlesere  Firefox Plugins/Add-Ons/Extensions  Passordhåndtering MedieAvspilling  iina Spotify ZSH Spark GitKraken Appcleaner Gemini 2 GrandPerspective Musikk Ableton Splice  Synkronisering og deling av data  Resilio Sync Pros &amp;amp; Cons  Akkordnotering  Chordpro Installasjon Generere sanger i alle tonearter   Pakkehåndtering Homebrew Homebrew er det første jeg anbefaler å installere på en ny maskin.</description>
+    </item>
+    
+  </channel>
+</rss>
