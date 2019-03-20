@@ -1,32 +1,73 @@
 baseurl = "http://kodekameraten.no/"
 languageCode = "nb-no"
 DefaultContentLanguage = "nb-no"
-theme = "hugo-theme-terminal"
+theme = "hello-friend"
 paginate = 5
-copyright = "Everything is mine"
 
 [params]
-  author = "Henry S. Sjøen"
+  # dir name of your blog content (default is `content/posts`)
   contentTypeName = "post"
-  themeColor = "green"
+  # "light" or "dark"
+  defaultTheme = "light"
   showMenuItems = 2
 
 [languages]
   [languages.nb-no]
-    title = "Kodekameraten | Henry S. Sjøen"
-    subtitle = ""
+    title = "K0d3kameraten"
+    subtitle = "Henrys hjemmeside"
     keywords = ""
-    copyright = "© 2019 Henry S. Sjøen"
-    menuMore = "Vis mer"
+    copyright = ""
+    menuMore = ""
+    writtenBy = "Skrevet av"
     readMore = "Les mer"
     readOtherPosts = "Les andre poster"
+    newerPosts = "Nyere poster"
+    olderPosts = "Eldre poster"
 
     [languages.nb-no.params.logo]
       logoText = "K0d3kameraten"
       logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
     [languages.nb-no.menu]
       [[languages.nb-no.menu.main]]
-        identifier = "Om meg"
-        name = "Hvem er Kodekameraten?"
+        identifier = "about"
+        name = "Om meg"
         url = "/about"
+      # [[languages.nb-no.menu.main]]
+      #   identifier = "showcase"
+      #   name = "Showcase"
+      #   url = "/showcase"
+
+[languages.en]
+    title = "K0d3kameraten"
+    subtitle = "Henrys homepage"
+    keywords = ""
+    copyright = ""
+    menuMore = ""
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+
+    [languages.en.params.logo]
+      logoText = "K0d3kameraten"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      # [[languages.en.menu.main]]
+      #   identifier = "showcase"
+      #   name = "Showcase"
+      #   url = "/showcase"
