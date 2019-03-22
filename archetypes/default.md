@@ -4,4 +4,5 @@ author: "{{.Site.Params.Author}}"
 date: {{ .Date }}
 draft: false
 description: ""
+tags: []
 ---
