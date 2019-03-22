@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>http://kodekameraten.no/math/l1/</loc>
+    <loc>http://kodekameraten.no/hidden/math/l1/</loc>
     <lastmod>2019-02-19T10:00:38+01:00</lastmod>
   </url>
   
@@ -35,6 +35,12 @@
   <url>
     <loc>http://kodekameraten.no/showcase/</loc>
     <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/announcement/</loc>
+    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -75,8 +81,8 @@
   </url>
   
   <url>
-    <loc>http://kodekameraten.no/math/</loc>
-    <lastmod>2019-02-19T10:00:38+01:00</lastmod>
+    <loc>http://kodekameraten.no/tags/norsk/</loc>
+    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -88,6 +94,7 @@
   
   <url>
     <loc>http://kodekameraten.no/tags/</loc>
+    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

@@ -35,5 +35,23 @@ Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /
  Pakkehåndtering  Homebrew  Vindushåndtering  Spectacle Amethyst  Nettlesere  Firefox Plugins/Add-Ons/Extensions  Passordhåndtering MedieAvspilling  iina Spotify ZSH Spark GitKraken Appcleaner Gemini 2 GrandPerspective Musikk Ableton Splice  Synkronisering og deling av data  Resilio Sync Pros &amp;amp; Cons  Akkordnotering  Chordpro Installasjon Generere sanger i alle tonearter   Pakkehåndtering Homebrew Homebrew er det første jeg anbefaler å installere på en ny maskin.</description>
     </item>
     
+    <item>
+      <title>Lecture 1: Introduction and Proofs</title>
+      <link>http://kodekameraten.no/hidden/math/l1/</link>
+      <pubDate>Tue, 19 Feb 2019 10:00:38 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/math/l1/</guid>
+      <description>MIT | Lecture 1: Introduction and Proofs
+Video clip from The Colbert Report 
+ A mathematical prooof is a verification of a proposition by a chain of logical deductions from a set of axioms.
+ $ a=95,800
+b=217,519
+c=414,560
+d=422,481$
+$\exists a,b,c,d \in N^+, a^4+b^4+c^4=d^4$
+There exists a combination of numbers a, b, c and d so that the sum of $a^4,b^4$ and $c^4$ equals $d^4$.
+Predicate: is a proposition whose truth depends on the value of a variable.</description>
+    </item>
+    
   </channel>
 </rss>

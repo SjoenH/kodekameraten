@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>http://kodekameraten.no/nb-no/sitemap.xml</loc>
-		
-	   	<lastmod>2019-03-12T11:59:32+01:00</lastmod>
+	   	<loc>http://kodekameraten.no/en/sitemap.xml</loc>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>http://kodekameraten.no/en/sitemap.xml</loc>
+	   	<loc>http://kodekameraten.no/nb-no/sitemap.xml</loc>
+		
+	   	<lastmod>2019-03-12T11:59:32+01:00</lastmod>
 		
 	</sitemap>
 	
