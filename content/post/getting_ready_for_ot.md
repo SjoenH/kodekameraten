@@ -15,4 +15,4 @@ I have some knowledge with React from one small project in class ( and some tink
 > My goal is to (1.) get proefficient in writing code in React, then  (2.) get comfortable with the basics of React Native and also (3.)  have a good enough understanding of the workings of Redux. 
 > ... and all this in 10 days. Wish me good luck!
 
-So... This is the introduction to the series "Henry is getting ready for Olavstoppen". You can find the other posts by following the tag "[Getting Ready 4 OT](/tags/getting-ready-4-ot/)".
+So... That was the introduction to the series "Henry is getting ready for Olavstoppen". You can find the other posts by following the tag "[Getting Ready 4 OT](/tags/getting-ready-4-ot/)".
