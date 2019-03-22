@@ -2,6 +2,7 @@
 title: "I'm Sorry"
 date: 2019-03-12T10:12:21+01:00
 draft: false
+tags: ["Norsk"]
 ---
 
 I vennekretsen min er jeg kjent som den som har oversikt om hva som finnes av programmer og ulike løsninger.

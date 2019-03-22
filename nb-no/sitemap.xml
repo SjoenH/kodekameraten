@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kodekameraten.no/post/getting_ready_for_ot/</loc>
+    <lastmod>2019-03-22T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kodekameraten.no/hidden/chordpro/</loc>
     <lastmod>2019-03-12T11:59:32+01:00</lastmod>
   </url>
@@ -59,6 +64,12 @@
   </url>
   
   <url>
+    <loc>http://kodekameraten.no/tags/getting-ready-4-ot/</loc>
+    <lastmod>2019-03-22T10:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://kodekameraten.no/hidden/</loc>
     <lastmod>2019-03-12T11:59:32+01:00</lastmod>
     <priority>0</priority>
@@ -66,7 +77,7 @@
   
   <url>
     <loc>http://kodekameraten.no/</loc>
-    <lastmod>2019-03-12T11:59:32+01:00</lastmod>
+    <lastmod>2019-03-22T10:00:00+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -82,13 +93,13 @@
   
   <url>
     <loc>http://kodekameraten.no/tags/norsk/</loc>
-    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+    <lastmod>2019-03-12T10:12:21+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://kodekameraten.no/post/</loc>
-    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+    <lastmod>2019-03-22T10:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

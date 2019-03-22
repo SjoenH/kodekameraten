@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Ready 4 Ot on K0d3kameraten</title>
+    <link>http://kodekameraten.no/tags/getting-ready-4-ot/</link>
+    <description>Recent content in Getting Ready 4 Ot on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Fri, 22 Mar 2019 10:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/tags/getting-ready-4-ot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting ready for Olavstoppen</title>
+      <link>http://kodekameraten.no/post/getting_ready_for_ot/</link>
+      <pubDate>Fri, 22 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/getting_ready_for_ot/</guid>
+      <description>I start in my new job at Olavstoppen the 1st of April. Yesterday I got an email with some more information on what technology I will be using: React, React-Native and Redux.
+I have some knowledge with React from one small project in class ( and some tinkering on my own ), but I can&amp;rsquo;t say that I&amp;rsquo;m a pro. Not yet at least.
+ My goal is to (1.) get proefficient in writing code in React, then (2.</description>
+    </item>
+    
+  </channel>
+</rss>
