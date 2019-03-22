@@ -5,6 +5,7 @@ author: "Henry Skorpe Sjøen"
 cover: "img/Ansettelsesavtale.png"
 description: "Kodekameraten har fått seg jobb i Olavstoppen!"
 title: Olavstoppen 01.04.2019
+tags: ["announcement","norsk"]
 ---
 
 # Kodekameraten har fått seg jobb i Olavstoppen!

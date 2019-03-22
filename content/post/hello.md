@@ -4,6 +4,7 @@ date: "2019-02-11"
 author: "Henry Skorpe Sjøen"
 cover: "img/hello.jpg"
 description : "Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside."
+tags: ["announcement","norsk"]
 ---
 
 Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside.

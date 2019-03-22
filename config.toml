@@ -18,6 +18,7 @@ disqusShortname = "kodekameraten"
   centerTheme = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
+  author = "Henry S. Sjøen"
 
 [languages]
   [languages.nb-no]
@@ -31,6 +32,9 @@ disqusShortname = "kodekameraten"
     readOtherPosts = "Les andre poster"
     newerPosts = "Nyere poster"
     olderPosts = "Eldre poster"
+    # contentDir = "content/norsk"
+    # languageName = "Norsk"
+    # weight = 10
 
     [languages.nb-no.params.logo]
       logoText = "K0d3kameraten"
@@ -61,6 +65,9 @@ disqusShortname = "kodekameraten"
     readOtherPosts = "Read other posts"
     newerPosts = "Newer posts"
     olderPosts = "Older posts"
+    # contentDir = "content/english"
+    # languageName = "English"
+    # weight = 20
 
     [languages.en.params.logo]
       logoText = "K0d3kameraten"
