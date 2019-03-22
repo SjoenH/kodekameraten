@@ -5,8 +5,8 @@ cd "`dirname "$0"`"
 
 echo -e "\n\033[0;32mBuilding with Hugo\033[0m"
 
-# Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+# Build the website.
+hugo
 
 # Move content from public folder into root.
 cp -r public/* .
