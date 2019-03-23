@@ -20,3 +20,5 @@ fields:
 - type: textarea
   name: description
   label: description
+pages:
+- content/post/ableton-desktop-backgrounds.md
