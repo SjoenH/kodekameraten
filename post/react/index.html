@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="nb-no">
+<head>
+  
+    <title>React :: K0d3kameraten — Henrys hjemmeside</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://kodekameraten.no/post/react/" />
+
+
+<link rel="stylesheet" href="http://kodekameraten.no/assets/style.css">
+
+  <link rel="stylesheet" href="http://kodekameraten.no/assets/green.css">
+
+
+
+<link rel="stylesheet" href="http://kodekameraten.no/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://kodekameraten.no/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="http://kodekameraten.no/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="React :: K0d3kameraten — Henrys hjemmeside" />
+<meta name="twitter:description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component." />
+<meta name="twitter:site" content="http://kodekameraten.no/" />
+<meta name="twitter:creator" content="Henry S. Sjøen" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="nb-no" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="React :: K0d3kameraten — Henrys hjemmeside">
+<meta property="og:description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component." />
+<meta property="og:url" content="http://kodekameraten.no/post/react/" />
+<meta property="og:site_name" content="React" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-03-22 10:33:11 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container full">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    K0d3kameraten
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">Om meg</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">Om meg</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="http://kodekameraten.no/post/react/">React</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2019-03-22
+      </span>
+      <span class="post-author">:: Henry S. Sjøen</span>
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="http://kodekameraten.no/tags/react/">React</a>&nbsp;
+        
+          #<a href="http://kodekameraten.no/tags/learning/">Learning</a>&nbsp;
+        
+          #<a href="http://kodekameraten.no/tags/notes/">notes</a>&nbsp;
+        
+          #<a href="http://kodekameraten.no/tags/getting-ready-4-ot/">Getting Ready 4 OT</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>This is a part of the series &ldquo;Henry is getting ready for Olavstoppen&rdquo;. You can find the other posts by following the tag &ldquo;<a href="/tags/getting-ready-4-ot/">Getting Ready 4 OT</a>&rdquo;.</p>
+
+<p>To learn React I have been following <a href="https://reactforbeginners.com/">this React course by Wes Bos</a>. And the following is mostly my notes and ramblings trying to digest it.</p>
+
+<p>React is, according to reactjs.org, <em>&ldquo;A JavaScript library for building user interfaces.&rdquo;</em></p>
+
+<!-- View is the same, you just change what's shown. -->
+
+<ul>
+<li><a href="#creating-our-first-component">Creating our first Component</a></li>
+<li><a href="#writing-html-with-jsx">Writing HTML with JSX</a></li>
+<li><a href="#linking-up-your-css-file">Linking up your CSS-file</a></li>
+<li><a href="#passing-dynamic-data-with-props">Passing dynamic data with Props</a></li>
+<li><a href="#routing-with-react-router">Routing with React Router</a></li>
+<li><a href="#helper-functions">Helper functions</a></li>
+<li><a href="#events-refs-and-this-binding">Events, Refs and this Binding</a>
+
+<ul>
+<li><a href="#events">Events</a></li>
+<li><a href="#ref-and-binding">Ref and Binding</a></li>
+</ul></li>
+</ul>
+
+<h1 id="creating-our-first-component">Creating our first Component</h1>
+
+<p>Everything is a component.</p>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+
+class SomeComponent extends React.Component{
+    render(){
+        return &lt;p&gt;Hello!&lt;/p&gt;
+    }
+}
+
+</code></pre>
+
+<p>Every component needs a <code>render()</code> method.</p>
+
+<p>If we want this to actully render, we need to add some more code</p>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+import { render } from 'react-dom'; //Since we are building a web-app
+
+class SomeComponent extends React.Component{
+    render(){
+        return &lt;p&gt;Hello!&lt;/p&gt;
+    }
+}
+
+render(&lt;SomeComponent /&gt;, document.querySelector('#main'));
+</code></pre>
+
+<p>It&rsquo;s good practice to put all components in seperate files. So&hellip;
+Let&rsquo;s move our <em>component</em> into a folder called <em>components</em>. And name it as <code>SomeComponent.js</code>.</p>
+
+<pre><code class="language-jsx">// src/components/SomeComponent.js
+import React from 'react';
+
+class SomeComponent extends React.Component{
+    render(){
+        return &lt;p&gt;Hello!&lt;/p&gt;
+    }
+
+    export default SomeComponent;
+}
+</code></pre>
+
+<p>Note: We need to import React in this file as well. Worry not; This wont make your application larger when buildt.
+We also need to export our <em>component</em> so that other <em>components</em> can use it.</p>
+
+<p>And we need to import it in our <code>index.js</code> file.</p>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+import { render } from 'react-dom';
+import SomeComponent from './components/SomeComponent'; // &lt;- Remember to import it
+
+render(&lt;SomeComponent /&gt;,document.querySelector('#main'));
+</code></pre>
+
+<h1 id="writing-html-with-jsx">Writing HTML with JSX</h1>
+
+<p>When returning html, you can only return one element. So you have to wrap siblings into a <code>&lt;React.Fragment&gt;</code> or a <code>&lt;div&gt;</code>.
+Comments need to look like this: <code>{/* Comment */}</code>.
+And the comment cannot be first (as a sibling)  in a return statement&hellip; Because then you would return just the comment. Even the comments need to be wrapped.</p>
+
+<pre><code class="language-jsx">// src/components/SomeComponent.js
+import React from 'react';
+
+class SomeComponent extends React.Component{
+    render(){
+        return (
+            &lt;React.Fragment&gt;
+                {/* Comment */}
+                &lt;p&gt;Hello!&lt;/p&gt;
+            &lt;/React.Fragment&gt;
+        );
+    }
+    export default SomeComponent;
+}
+</code></pre>
+
+<blockquote>
+<p><strong>Disclaimer</strong>: I hope this code works. Haven&rsquo;t checked it since this is mostly for my own learning.</p>
+</blockquote>
+
+<h1 id="linking-up-your-css-file">Linking up your CSS-file</h1>
+
+<p>To link your CSS file you just need to import it.</p>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+import { render } from 'react-dom';
+import SomeComponent from './components/SomeComponent'; 
+import &quot;./css/style.css&quot;; // &lt;- It's as simple as that!
+
+render(&lt;SomeComponent /&gt;,document.querySelector('#main'));
+</code></pre>
+
+<h1 id="passing-dynamic-data-with-props">Passing dynamic data with Props</h1>
+
+<p>Props is the way we get data into a component.</p>
+
+<p>How do we access the data when passing it as an prop?
+There are no preset props, so you can just make up your own. Like <code>myRandomProp</code>.</p>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+import { render } from 'react-dom';
+import SomeComponent from './components/SomeComponent'; 
+import &quot;./css/style.css&quot;;
+
+render(
+    &lt;SomeComponent myRandomProp=&quot;HELLO WORLD!&quot;/&gt;,
+    document.querySelector('#main')
+);
+</code></pre>
+
+<p>Props are kind of an object of data that is sent into a component.
+You can also send other types of props, like <em>bools</em>:
+<code>myBoolProp = {true}</code> or <em>ints</em>:<code>myIntProp = {100}</code>.</p>
+
+<h1 id="routing-with-react-router">Routing with React Router</h1>
+
+<p>The routing is not baked into react (like in angular), we have to use an external component.
+The two most popular ones are React Router and Next.js.</p>
+
+<p>Let&rsquo;s use React Router for now.
+So we make another component and call it <code>Router.js</code> in our components directory.</p>
+
+<pre><code class="language-jsx">// src/components/Router.js
+import React from &quot;react&quot;;
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
+
+const Router = () =&gt; (
+    &lt;BrowserRouter&gt;
+        &lt;Switch&gt;
+            &lt;Route exact path = &quot;/&quot; component={SomeComponent} /&gt;
+            &lt;Route exact path = &quot;/store/:storeID&quot; component={SomeOtherComponent} /&gt;
+            &lt;Route component={NotFoundComponent} /&gt;
+        &lt;/Switch&gt;
+    &lt;/BrowserRouter&gt;
+)
+export default Router;
+</code></pre>
+
+<pre><code class="language-jsx">// src/index.js
+import React from 'react';
+import { render } from 'react-dom';
+import Router from &quot;./components/Router&quot;; // &lt;- Import the router 
+// import SomeComponent from './components/SomeComponent'; &lt;- Remove this
+import &quot;./css/style.css&quot;;
+
+render(
+    &lt;Router /&gt;,
+    document.querySelector('#main')
+);
+</code></pre>
+
+<h1 id="helper-functions">Helper functions</h1>
+
+<p>Not something special for React, but it&rsquo;s smart to put your &ldquo;helper-functions&rdquo; somewhere logical like a <code>helpers.js</code> file.</p>
+
+<pre><code class="language-js">// helpers.js
+export default myHelperFunction(){
+    return(true);
+}
+</code></pre>
+
+<h1 id="events-refs-and-this-binding">Events, Refs and this Binding</h1>
+
+<h2 id="events">Events</h2>
+
+<!-- SyntheticEvent -->
+
+<p>You can add events to elements by adding it inline <code>onClick={this.handleClick}</code></p>
+
+<pre><code class="language-jsx">import React from 'react';
+
+class MyComponent extends React.Component{
+    handleClick(){
+        alert(&quot;Hello World!&quot;);
+    }
+    render(){
+        return &lt;button onClick={this.handleClick}&gt;Click Me!&lt;/button&gt;
+    }
+
+}
+</code></pre>
+
+<p><strong>Note</strong>: We don&rsquo;t want to write our onClick with &ldquo;()&ldquo;s couse that would make the handleClick trigger when mounting the module.</p>
+
+<pre><code class="language-js">// The wrong way:
+&lt;button onClick={this.handleClick()}&gt;Click Me!&lt;/button&gt; //&lt;- Wrong! 
+// This would make the handleClick trigger on mounting the module.
+
+// The correct way:
+&lt;button onClick={this.handleClick}&gt;Click Me!&lt;/button&gt; //&lt;- Correct! Do it like this instead!
+// Our button will only trigger the handleClick when pressed.
+</code></pre>
+
+<h2 id="ref-and-binding">Ref and Binding</h2>
+
+<p>The golden rule in react is: &ldquo;Don&rsquo;t touch the DOM!&rdquo;, so we have to ref stuff by creating a ref in the top of your class and adding a ref-attribute to your element.</p>
+
+<pre><code class="language-jsx">//NB this will not work
+import React from 'react';
+
+class MyComponent extends React.Component{
+    myInput = React.createRef();
+  
+    handleClick(){
+        alert(&quot;Hello World!&quot;);
+        console.log(this.myInput); //&lt;- UNDEFINED!
+    }
+    render(){
+        return &lt;input ref={this.myInput} /&gt;
+    }
+
+}
+</code></pre>
+
+<p>But trying to reach <code>this.myInput</code> from another method in the same class would not work and just yield <em>undefined</em>.
+So to circumwent this, we can rebind the <code>this</code> to point to the same class in the whole class.
+We do this in a <em>Constructor function</em></p>
+
+<pre><code class="language-jsx">import React from 'react';
+
+class MyComponent extends React.Component{
+    myInput = React.createRef();
+    constructor(){
+        super(); // &lt;- We need this
+        this.MyComponent = this.MyComponent.bind(this) // This binds the this-scope
+    }
+    handleClick(){
+        alert(&quot;Hello World!&quot;);
+        console.log(this.myInput);
+    }
+    render(){
+        return &lt;input ref={this.myInput} /&gt;
+    }
+
+}
+</code></pre>
+
+<p>Now we should be able to ref the input, but if we want to ref a lot of stuff, our class would soon be filled with a lot of <code>this.MyComponent = this.MyComponent.bind(this)</code>.</p>
+
+<p>The solution to this problem is to use a <em>funky</em> formatting of our methods that makes the method a property of the class.
+<code>handleClick = (event) =&gt; {</code></p>
+
+<pre><code class="language-jsx">import React from 'react';
+
+class MyComponent extends React.Component{
+    myInput = React.createRef();
+
+    handleClick = (event ) =&gt; { //&lt;- THIS IS FUNKY!
+        alert(&quot;Hello World!&quot;);
+        console.log(this.myInput); // &lt;- We can still reach it!
+    }
+    render(){
+        return &lt;input ref={this.myInput} /&gt;
+    }
+
+}
+</code></pre>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Les andre poster</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="http://kodekameraten.no/post/ableton-desktop-backgrounds/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Ableton Desktop Backgrounds</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="http://kodekameraten.no/post/getting_ready_for_ot/">
+                <span class="button__text">Getting ready for Olavstoppen</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kodekameraten" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="http://kodekameraten.no/assets/main.js"></script>
+<script src="http://kodekameraten.no/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

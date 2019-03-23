@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on K0d3kameraten</title>
+    <link>http://kodekameraten.no/tags/notes/</link>
+    <description>Recent content in Notes on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Fri, 22 Mar 2019 10:33:11 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React</title>
+      <link>http://kodekameraten.no/post/react/</link>
+      <pubDate>Fri, 22 Mar 2019 10:33:11 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/react/</guid>
+      <description>This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component.</description>
+    </item>
+    
+  </channel>
+</rss>

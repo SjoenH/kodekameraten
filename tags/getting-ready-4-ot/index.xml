@@ -6,10 +6,22 @@
     <description>Recent content in Getting Ready 4 Ot on K0d3kameraten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
-    <lastBuildDate>Fri, 22 Mar 2019 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2019 10:33:11 +0100</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/tags/getting-ready-4-ot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React</title>
+      <link>http://kodekameraten.no/post/react/</link>
+      <pubDate>Fri, 22 Mar 2019 10:33:11 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/react/</guid>
+      <description>This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component.</description>
+    </item>
     
     <item>
       <title>Getting ready for Olavstoppen</title>
