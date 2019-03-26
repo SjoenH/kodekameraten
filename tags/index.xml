@@ -6,10 +6,19 @@
     <description>Recent content in Tags on K0d3kameraten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
-    <lastBuildDate>Tue, 12 Feb 2019 09:46:22 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0100</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ableton</title>
+      <link>http://kodekameraten.no/tags/ableton/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/tags/ableton/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Announcement</title>
@@ -17,6 +26,15 @@
       <pubDate>Tue, 12 Feb 2019 09:46:22 +0100</pubDate>
       
       <guid>http://kodekameraten.no/tags/announcement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Backgrounds</title>
+      <link>http://kodekameraten.no/tags/backgrounds/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/tags/backgrounds/</guid>
       <description></description>
     </item>
     

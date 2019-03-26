@@ -58,8 +58,20 @@
   </url>
   
   <url>
+    <loc>http://kodekameraten.no/tags/ableton/</loc>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://kodekameraten.no/tags/announcement/</loc>
     <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/backgrounds/</loc>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,7 +168,7 @@
   
   <url>
     <loc>http://kodekameraten.no/tags/</loc>
-    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backgrounds on K0d3kameraten</title>
+    <link>http://kodekameraten.no/tags/backgrounds/</link>
+    <description>Recent content in Backgrounds on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/tags/backgrounds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ableton Desktop Backgrounds</title>
+      <link>http://kodekameraten.no/post/ableton-desktop-backgrounds/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/ableton-desktop-backgrounds/</guid>
+      <description>Here are some desktop backgrounds that I made. Feel free to use them as you wish. You can download them all as a .zip from here.</description>
+    </item>
+    
+  </channel>
+</rss>
