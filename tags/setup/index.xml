@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Setup on K0d3kameraten</title>
+    <link>http://kodekameraten.no/tags/setup/</link>
+    <description>Recent content in Setup on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Tue, 26 Mar 2019 21:19:54 +0100</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/tags/setup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Mac Setup Script</title>
+      <link>http://kodekameraten.no/post/macsetup/</link>
+      <pubDate>Tue, 26 Mar 2019 21:19:54 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/macsetup/</guid>
+      <description>I&amp;rsquo;ve been thinking about how to automate the process of making a new mac feel at home for me. So I&amp;rsquo;ve customized a script that does exactly that!
+This is shamelessly inspired by, and most of the stuff is a straight copy from bradp.
+ Most likely you don&amp;rsquo;t want my exact setup, but feel free to take a look and rip off what you like! 🙃 You can find my repo here.</description>
+    </item>
+    
+  </channel>
+</rss>
