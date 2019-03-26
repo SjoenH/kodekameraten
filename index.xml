@@ -6,10 +6,21 @@
     <description>Recent content on K0d3kameraten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nb-no</language>
-    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2019 21:19:54 +0100</lastBuildDate>
     
 	<atom:link href="http://kodekameraten.no/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>New Mac Setup Script</title>
+      <link>http://kodekameraten.no/post/macsetup/</link>
+      <pubDate>Tue, 26 Mar 2019 21:19:54 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/macsetup/</guid>
+      <description>I&amp;rsquo;ve been thinking about how to automate the process of making a new mac feel at home for me. So I&amp;rsquo;ve customized a script that does exactly that!
+This is shamelessly inspired by, and most of the stuff is a straight copy from bradp.
+ Most likely you don&amp;rsquo;t want my setup, but feel free to take a look and rip off what you like! 🙃 You can find my repo here.</description>
+    </item>
     
     <item>
       <title>Ableton Desktop Backgrounds</title>
@@ -17,7 +28,7 @@
       <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
       
       <guid>http://kodekameraten.no/post/ableton-desktop-backgrounds/</guid>
-      <description>Here are some desktop backgrounds that I made. Feel free to use them as you wish. You can download them all as a zip from here.</description>
+      <description>Here are some desktop backgrounds that I made. Feel free to use them as you wish. You can download them all as a .zip from here.</description>
     </item>
     
     <item>
@@ -29,7 +40,7 @@
       <description>This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
 To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
 React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
- Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component.</description>
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding  Rule number 1: Don&amp;rsquo;t touch the DOM.</description>
     </item>
     
     <item>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kodekameraten.no/post/macsetup/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kodekameraten.no/post/ableton-desktop-backgrounds/</loc>
     <lastmod>2019-03-23T00:00:00+01:00</lastmod>
   </url>
@@ -87,7 +92,7 @@
   
   <url>
     <loc>http://kodekameraten.no/</loc>
-    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -121,7 +126,7 @@
   
   <url>
     <loc>http://kodekameraten.no/post/</loc>
-    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
     <priority>0</priority>
   </url>
   

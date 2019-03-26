@@ -20,7 +20,7 @@
       <description>This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
 To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
 React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
- Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component.</description>
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding  Rule number 1: Don&amp;rsquo;t touch the DOM.</description>
     </item>
     
   </channel>

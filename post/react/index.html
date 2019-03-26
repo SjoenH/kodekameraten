@@ -9,7 +9,7 @@
 <meta name="description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
 To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
 React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
- Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component."/>
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding  Rule number 1: Don&amp;rsquo;t touch the DOM."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="http://kodekameraten.no/post/react/" />
@@ -35,7 +35,7 @@ React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building
 <meta name="twitter:description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
 To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
 React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
- Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component." />
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding  Rule number 1: Don&amp;rsquo;t touch the DOM." />
 <meta name="twitter:site" content="http://kodekameraten.no/" />
 <meta name="twitter:creator" content="Henry S. Sjøen" />
 <meta name="twitter:image" content="">
@@ -47,7 +47,7 @@ React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building
 <meta property="og:description" content="This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;rdquo;.
 To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
 React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;rdquo;
- Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Creating our first Component Everything is a component." />
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding  Rule number 1: Don&amp;rsquo;t touch the DOM." />
 <meta property="og:url" content="http://kodekameraten.no/post/react/" />
 <meta property="og:site_name" content="React" />
 <meta property="og:image" content="">
@@ -144,7 +144,7 @@ React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building
 
 <p>To learn React I have been following <a href="https://reactforbeginners.com/">this React course by Wes Bos</a>. And the following is mostly my notes and ramblings trying to digest it.</p>
 
-<p>React is, according to reactjs.org, <em>&ldquo;A JavaScript library for building user interfaces.&rdquo;</em></p>
+<p>React is, according to <a href="http://reactjs.org">reactjs.org</a>, <em>&ldquo;A JavaScript library for building user interfaces.&rdquo;</em></p>
 
 <!-- View is the same, you just change what's shown. -->
 
@@ -161,6 +161,14 @@ React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building
 <li><a href="#events">Events</a></li>
 <li><a href="#ref-and-binding">Ref and Binding</a></li>
 </ul></li>
+<li><a href="#rule-number-1-dont-touch-the-dom">Rule number 1: Don&rsquo;t touch the DOM.</a></li>
+<li><a href="#state">State</a>
+
+<ul>
+<li><a href="#sharing-state">Sharing state</a></li>
+</ul></li>
+<li><a href="#looping-over-something-and-showing-it-in-the-view">Looping over something (and showing it in the view)</a></li>
+<li><a href="#es6-destructuring-assignment">ES6 destructuring assignment</a></li>
 </ul>
 
 <h1 id="creating-our-first-component">Creating our first Component</h1>
@@ -180,7 +188,7 @@ class SomeComponent extends React.Component{
 
 <p>Every component needs a <code>render()</code> method.</p>
 
-<p>If we want this to actully render, we need to add some more code</p>
+<p>If we want this to actually render, we need to add some more code</p>
 
 <pre><code class="language-jsx">// src/index.js
 import React from 'react';
@@ -195,7 +203,7 @@ class SomeComponent extends React.Component{
 render(&lt;SomeComponent /&gt;, document.querySelector('#main'));
 </code></pre>
 
-<p>It&rsquo;s good practice to put all components in seperate files. So&hellip;
+<p>Its good practice to put all components in separate files. So&hellip;
 Let&rsquo;s move our <em>component</em> into a folder called <em>components</em>. And name it as <code>SomeComponent.js</code>.</p>
 
 <pre><code class="language-jsx">// src/components/SomeComponent.js
@@ -210,7 +218,7 @@ class SomeComponent extends React.Component{
 }
 </code></pre>
 
-<p>Note: We need to import React in this file as well. Worry not; This wont make your application larger when buildt.
+<p>Note: We need to import React in this file as well. Worry not; This won&rsquo;t make your application larger when built.
 We also need to export our <em>component</em> so that other <em>components</em> can use it.</p>
 
 <p>And we need to import it in our <code>index.js</code> file.</p>
@@ -225,9 +233,9 @@ render(&lt;SomeComponent /&gt;,document.querySelector('#main'));
 
 <h1 id="writing-html-with-jsx">Writing HTML with JSX</h1>
 
-<p>When returning html, you can only return one element. So you have to wrap siblings into a <code>&lt;React.Fragment&gt;</code> or a <code>&lt;div&gt;</code>.
+<p>When returning HTML, you can only return one element. So you have to wrap siblings into a <code>&lt;React.Fragment&gt;</code> or a <code>&lt;div&gt;</code>.
 Comments need to look like this: <code>{/* Comment */}</code>.
-And the comment cannot be first (as a sibling)  in a return statement&hellip; Because then you would return just the comment. Even the comments need to be wrapped.</p>
+And the comment cannot be first (as a sibling) in a return statement&hellip; Because then you would return just the comment. Even the comments need to be wrapped.</p>
 
 <pre><code class="language-jsx">// src/components/SomeComponent.js
 import React from 'react';
@@ -266,7 +274,7 @@ render(&lt;SomeComponent /&gt;,document.querySelector('#main'));
 
 <p>Props is the way we get data into a component.</p>
 
-<p>How do we access the data when passing it as an prop?
+<p>How do we access the data when passing it as a prop?
 There are no preset props, so you can just make up your own. Like <code>myRandomProp</code>.</p>
 
 <pre><code class="language-jsx">// src/index.js
@@ -353,7 +361,7 @@ class MyComponent extends React.Component{
 }
 </code></pre>
 
-<p><strong>Note</strong>: We don&rsquo;t want to write our onClick with &ldquo;()&ldquo;s couse that would make the handleClick trigger when mounting the module.</p>
+<p><strong>Note</strong>: We don&rsquo;t want to write our onClick with &ldquo;()&ldquo;s cause that would make the handleClick trigger when mounting the module.</p>
 
 <pre><code class="language-js">// The wrong way:
 &lt;button onClick={this.handleClick()}&gt;Click Me!&lt;/button&gt; //&lt;- Wrong! 
@@ -386,7 +394,7 @@ class MyComponent extends React.Component{
 </code></pre>
 
 <p>But trying to reach <code>this.myInput</code> from another method in the same class would not work and just yield <em>undefined</em>.
-So to circumwent this, we can rebind the <code>this</code> to point to the same class in the whole class.
+So to circumvent this, we can rebind the <code>this</code> to point to the same class in the whole class.
 We do this in a <em>Constructor function</em></p>
 
 <pre><code class="language-jsx">import React from 'react';
@@ -428,6 +436,93 @@ class MyComponent extends React.Component{
 
 }
 </code></pre>
+
+<h1 id="rule-number-1-don-t-touch-the-dom">Rule number 1: Don&rsquo;t touch the DOM.</h1>
+
+<p>We don&rsquo;t want to touch the DOM when writing React apps.
+We want to change the data, and then see the DOM react to it.</p>
+
+<h1 id="state">State</h1>
+
+<p>State is essentially just an object that lives inside a component that stores data that itself needs and maybe also what other components needs.</p>
+
+<h2 id="sharing-state">Sharing state</h2>
+
+<p>We can&rsquo;t pass data up, only down the stream.
+Therefore, we need to store stuff that should be shared in a higher component like the Appcomponent.</p>
+
+<pre><code class="language-jsx">state = {
+ fishes:{},
+ order:{}
+}
+</code></pre>
+
+<p>How do you use a method from Appcomponent in a child-component? The answer is Props!
+So let&rsquo;s say we have a method called <code>addFish</code>. Then we cas send it to <code>Inventory</code>-component as a prop like this:</p>
+
+<pre><code class="language-jsx">// app.js
+// Appcomponent
+class App extends React.Component{
+    state = {
+        fishes: {},
+        order:{}
+    }
+    addFish = fish =&gt; {
+        console.log(&quot;Add some fish&quot;)
+    }
+    render(){
+        return(
+        &lt;Inventory addFish={this.addFish} /&gt;
+        )
+    }
+}
+</code></pre>
+
+<p>And then in our <code>Inventory</code>-Component, we can access it through <code>this.props.addFish</code>.</p>
+
+<p>BUT: In order to update our state we want to:</p>
+
+<pre><code class="language-js">// Take a copy of the existing state. 
+// ( We don't want to directly work on the state)
+const fishes = {...this.state.fishes}
+// Add our new fish to that new fishes variable
+fishes[`fish${Date.now()}`]=fish;
+// Update our state with the new ``fishes`` object
+this.setState({fishes});
+</code></pre>
+
+<p>Note, we don&rsquo;t need to pass our whole state to the <code>setState()</code>-method, only the parts we want to change.
+Then <code>setState()</code> will update our <code>state</code>-object in the current component.</p>
+
+<!-- # Loading data into state onClick -->
+
+<h1 id="looping-over-something-and-showing-it-in-the-view">Looping over something (and showing it in the view)</h1>
+
+<p>JSX does not have any logic like other template languages&hellip; So we need to do it with JavaScript.</p>
+
+<pre><code class="language-jsx">{Object.keys(this.state.fishes).map(key =&gt; &lt;Fish key={key}/&gt;}
+</code></pre>
+
+<p>And relevant data as a prop&hellip;</p>
+
+<pre><code class="language-jsx">{Object.keys(this.state.fishes).map(key =&gt; &lt;Fish key={key} details={this.state.fishes[key]} /&gt;}
+</code></pre>
+
+<h1 id="es6-destructuring-assignment">ES6 destructuring assignment</h1>
+
+<p>This:</p>
+
+<pre><code class="language-js">const name = this.props.details.name;
+const image = this.props.details.image;
+const name = this.props.details.price;
+</code></pre>
+
+<p>Can be replaced with:</p>
+
+<pre><code class="language-js">const {name, image, price}= this.props.details;
+</code></pre>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Read more over at MDN</a></p>
 
     </div>
     
