@@ -4,7 +4,7 @@ author: "Henry S. Sjøen"
 date: 2019-03-22T10:33:11+01:00
 draft: false
 description: ""
-tags: ["React","Learning","notes","Getting Ready 4 OT"]
+tags: ["React","Learning","Notes","Getting Ready 4 OT"]
 ---
 
 This is a part of the series "Henry is getting ready for Olavstoppen". You can find the other posts by following the tag "[Getting Ready 4 OT](/tags/getting-ready-4-ot/)".

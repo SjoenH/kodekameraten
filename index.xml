@@ -62,6 +62,20 @@ I have some knowledge with React from one small project in class ( and some tink
       <guid>http://kodekameraten.no/hidden/chordpro/</guid>
       <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
 Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
+App-er? Det er mange programmer som støtter å vise chordpro-notering. Todo: List more stuff
+OnSong https://onsongapp.com/
+Installasjon Se https://www.chordpro.org for hjelp til installasjon.
+Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>
+    </item>
+    
+    <item>
+      <title>Chordpro</title>
+      <link>http://kodekameraten.no/post/chordpro/</link>
+      <pubDate>Tue, 12 Mar 2019 11:59:32 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/chordpro/</guid>
+      <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
+Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
 App-er? Det er mange programmer som støtter å vise chordpro-notering.
 OnSong https://onsongapp.com/
 Installasjon Se https://www.chordpro.org for hjelp til installasjon.

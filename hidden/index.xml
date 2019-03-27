@@ -19,7 +19,7 @@
       <guid>http://kodekameraten.no/hidden/chordpro/</guid>
       <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
 Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
-App-er? Det er mange programmer som støtter å vise chordpro-notering.
+App-er? Det er mange programmer som støtter å vise chordpro-notering. Todo: List more stuff
 OnSong https://onsongapp.com/
 Installasjon Se https://www.chordpro.org for hjelp til installasjon.
 Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>

@@ -5,7 +5,7 @@ date: 2019-03-26T21:19:54+01:00
 draft: false
 description: "I've been thinking about how to automate the process of making a new mac feel at home for me.
 So I've customized a script that does exactly that!"
-tags: ['setup','mac','bash']
+tags: ['Setup','Mac','Bash','Script']
 ---
 
 I've been thinking about how to automate the process of making a new mac feel at home for me.
