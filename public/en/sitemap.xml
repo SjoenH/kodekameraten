@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://kodekameraten.no/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/en/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/tags/"
+                />
+  </url>
+  
+</urlset>
