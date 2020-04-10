@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K0d3kameraten</title>
+    <link>http://kodekameraten.no/</link>
+    <description>Recent content on K0d3kameraten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb-no</language>
+    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kodekameraten.no/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Web Servers</title>
+      <link>http://kodekameraten.no/post/simple-web-servers/</link>
+      <pubDate>Fri, 10 Apr 2020 17:08:16 +0200</pubDate>
+      
+      <guid>http://kodekameraten.no/post/simple-web-servers/</guid>
+      <description>A quick comparison of some simple web server frameworks and languages.
+Python &amp;amp; Flask from flask import Flask app= Flask(__name__) import random @app.route(&amp;#39;/&amp;#39;) def hello_world(): return &amp;#34;Hello, World!&amp;#34; @app.route(&amp;#39;/roll_dice&amp;#39;) def roll_dice(): return str(random.randint(1,6)) Ruby &amp;amp; Sinatra require &amp;#39;sinatra&amp;#39; get &amp;#39;/&amp;#39; do &amp;#34;Hello world&amp;#34; end get &amp;#39;/roll_dice&amp;#39; do rand(1..6).to_s end Javascript &amp;amp; Express const express = require(&amp;#39;express&amp;#39;) const app = express() const port = 3000 app.get(&amp;#39;/&amp;#39;,(req,res)=&amp;gt;res.send(&amp;#39;Hello World!&amp;#39;)) app.get(&amp;#39;/roll_dice&amp;#39;,(req,res)=&amp;gt;res.send(`${Math.floor(Math.random()*6)+1}`)) app.listen(port,()=&amp;gt;console.log(`Example app listening at http://localhost:${port}`)) </description>
+    </item>
+    
+    <item>
+      <title>New Mac Setup Script</title>
+      <link>http://kodekameraten.no/post/macsetup/</link>
+      <pubDate>Tue, 26 Mar 2019 21:19:54 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/macsetup/</guid>
+      <description>I&amp;rsquo;ve been thinking about how to automate the process of making a new mac feel at home for me. So I&amp;rsquo;ve customized a script that does exactly that!
+This is shamelessly inspired by, and most of the stuff is a straight copy from bradp.
+ Most likely you don&amp;rsquo;t want my exact setup, but feel free to take a look and rip off what you like! 🙃 You can find my repo here.</description>
+    </item>
+    
+    <item>
+      <title>Ableton Desktop Backgrounds</title>
+      <link>http://kodekameraten.no/post/ableton-desktop-backgrounds/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/ableton-desktop-backgrounds/</guid>
+      <description>Here are some desktop backgrounds that I made. Feel free to use them as you wish. You can download them all as a .zip from here.
+![](/uploads/Ableton logo background - frost golden fish.png)![](/uploads/Ableton logo background - frost golden contrast.png)![](/uploads/Ableton logo background - Gradient blue pink golden.png)![](/uploads/Ableton logo background - Droplets blue light.png)![](/uploads/Ableton logo background - Droplets blue dark.png)![](/uploads/Ableton logo background - Gradient Orange red.png)![](/uploads/Ableton logo background - Gradient blue pink golden fish.</description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://kodekameraten.no/post/react/</link>
+      <pubDate>Fri, 22 Mar 2019 10:33:11 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/react/</guid>
+      <description>This is a part of the series &amp;ldquo;Henry is getting ready for Olavstoppen&amp;rdquo;. You can find the other posts by following the tag &amp;ldquo;Getting Ready 4 OT&amp;quot;.
+To learn React I have been following this React course by Wes Bos. And the following is mostly my notes and ramblings trying to digest it.
+React is, according to reactjs.org, &amp;ldquo;A JavaScript library for building user interfaces.&amp;quot;
+ Creating our first Component Writing HTML with JSX Linking up your CSS-file Passing dynamic data with Props Routing with React Router Helper functions Events, Refs and this Binding  Events Ref and Binding   Rule number 1: Don&amp;rsquo;t touch the DOM.</description>
+    </item>
+    
+    <item>
+      <title>Getting ready for Olavstoppen</title>
+      <link>http://kodekameraten.no/post/getting_ready_for_ot/</link>
+      <pubDate>Fri, 22 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/getting_ready_for_ot/</guid>
+      <description>I start in my new job at Olavstoppen the 1st of April. Yesterday I got an email with some more information on what technology I will be using: React, React-Native and Redux.
+I have some knowledge with React from one small project in class ( and some tinkering on my own ), but I can&amp;rsquo;t say that I&amp;rsquo;m a pro. Not yet at least.
+ My goal is to (1.) be efficient in writing code in React, then (2.</description>
+    </item>
+    
+    <item>
+      <title>Chordpro</title>
+      <link>http://kodekameraten.no/hidden/chordpro/</link>
+      <pubDate>Tue, 12 Mar 2019 11:59:32 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/chordpro/</guid>
+      <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
+Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
+App-er? Det er mange programmer som støtter å vise chordpro-notering. Todo: List more stuff
+OnSong https://onsongapp.com/
+Installasjon Se https://www.chordpro.org for hjelp til installasjon.
+Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>
+    </item>
+    
+    <item>
+      <title>Chordpro</title>
+      <link>http://kodekameraten.no/post/chordpro/</link>
+      <pubDate>Tue, 12 Mar 2019 11:59:32 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/chordpro/</guid>
+      <description>Chordpro brukes når man vil ha nøyaktig plassering av akkorder i tekst-dokumentet, og ha mulighet til å transponere når som helst.
+Chordro er bare vanlige .txt-filer, men man kan generere (blant annet) pdf ut av det.
+App-er? Det er mange programmer som støtter å vise chordpro-notering.
+OnSong https://onsongapp.com/
+Installasjon Se https://www.chordpro.org for hjelp til installasjon.
+Dersom du har Mac kan du installere Chordpro Cli-programmet ved å skrive sudo /usr/bin/cpan chordpro i terminalen din.</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m Sorry</title>
+      <link>http://kodekameraten.no/hidden/howtomac/</link>
+      <pubDate>Tue, 12 Mar 2019 10:12:21 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/howtomac/</guid>
+      <description>I vennekretsen min er jeg kjent som den som har oversikt om hva som finnes av programmer og ulike løsninger. Her er en liste over programmer som jeg ofte bruker.
+ Pakkehåndtering  Homebrew   Vindushåndtering  Spectacle Amethyst   Nettlesere  Firefox  Plugins/Add-Ons/Extensions     Passordhåndtering MedieAvspilling  iina Spotify ZSH Spark GitKraken Appcleaner Gemini 2 GrandPerspective Musikk  Ableton Splice     Synkronisering og deling av data  Resilio Sync  Pros &amp;amp; Cons     Akkordnotering  Chordpro  Installasjon Generere sanger i alle tonearter      Pakkehåndtering Homebrew Homebrew er det første jeg anbefaler å installere på en ny maskin.</description>
+    </item>
+    
+    <item>
+      <title>Lecture 1: Introduction and Proofs</title>
+      <link>http://kodekameraten.no/hidden/math/l1/</link>
+      <pubDate>Tue, 19 Feb 2019 10:00:38 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/hidden/math/l1/</guid>
+      <description>MIT | Lecture 1: Introduction and Proofs
+Video clip from The Colbert Report
+ A mathematical prooof is a verification of a proposition by a chain of logical deductions from a set of axioms.
+ $ a=95,800\
+b=217,519\
+c=414,560\
+d=422,481$
+$\exists a,b,c,d \in N^+, a^4+b^4+c^4=d^4$
+There exists a combination of numbers a, b, c and d so that the sum of $a^4,b^4$ and $c^4$ equals $d^4$.
+Predicate: is a proposition whose truth depends on the value of a variable.</description>
+    </item>
+    
+    <item>
+      <title>Olavstoppen 01.04.2019</title>
+      <link>http://kodekameraten.no/post/olavstoppen/</link>
+      <pubDate>Tue, 12 Feb 2019 09:46:22 +0100</pubDate>
+      
+      <guid>http://kodekameraten.no/post/olavstoppen/</guid>
+      <description>Kodekameraten har fått seg jobb i Olavstoppen! Den 1. April (ingen spøk) starter jeg i 100% stilling som utvikler i Olavstoppen, Stavanger.
+Olavstoppen er et datterselskap til Bouvet og har spisset kompetanse på digitale brukeropplevelser.
+Sammen med 39 andre ansatte skal jeg jobbe med å finne de gode løsningene. Jeg gleder meg!</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://kodekameraten.no/post/hello/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kodekameraten.no/post/hello/</guid>
+      <description>Hallo verden! Mitt navn er Henry, også kjent som Kodekameraten i enkelte kretser. Velkommen til min nettside.
+Kort om meg Jeg er en nysgjerrig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.</description>
+    </item>
+    
+    <item>
+      <title>Om meg</title>
+      <link>http://kodekameraten.no/about/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kodekameraten.no/about/</guid>
+      <description>Hei! Jeg er en hyggelig og nysgjerrig, nyutdannet informatiker med et hjerte for de gode opplevelsene. Teknologi interesserer meg, enten det er bleeding-edge eller om det er gjort på den gode gamle måten. Jeg brenner for å finne praktiske løsninger som er tilpasset et behov og trives godt med å jobbe i team og tar ansvar for at arbeidet blir gjort.
+Ved siden av studiet har jeg; Utviklet og lansert over 5 apper for iOS, Android og Web.</description>
+    </item>
+    
+    <item>
+      <title>Showcase</title>
+      <link>http://kodekameraten.no/showcase/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kodekameraten.no/showcase/</guid>
+      <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
+    </item>
+    
+  </channel>
+</rss>

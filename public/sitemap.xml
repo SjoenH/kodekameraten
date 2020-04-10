@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://kodekameraten.no/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://kodekameraten.no/nb-no/sitemap.xml</loc>
+		
+	   	<lastmod>2020-04-10T17:08:16+02:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

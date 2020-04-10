@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://kodekameraten.no/post/</loc>
+    <lastmod>2020-04-10T17:08:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/simple-web-servers/</loc>
+    <lastmod>2020-04-10T17:08:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/bash/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/mac/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/macsetup/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/script/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/setup/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/</loc>
+    <lastmod>2019-03-26T21:19:54+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/ableton/</loc>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/ableton-desktop-backgrounds/</loc>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/backgrounds/</loc>
+    <lastmod>2019-03-23T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/getting-ready-4-ot/</loc>
+    <lastmod>2019-03-22T10:33:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/learning/</loc>
+    <lastmod>2019-03-22T10:33:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/notes/</loc>
+    <lastmod>2019-03-22T10:33:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/react/</loc>
+    <lastmod>2019-03-22T10:33:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/react/</loc>
+    <lastmod>2019-03-22T10:33:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/getting_ready_for_ot/</loc>
+    <lastmod>2019-03-22T10:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/hidden/chordpro/</loc>
+    <lastmod>2019-03-12T11:59:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/chordpro/</loc>
+    <lastmod>2019-03-12T11:59:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/hidden/</loc>
+    <lastmod>2019-03-12T11:59:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/music/</loc>
+    <lastmod>2019-03-12T11:59:32+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/hidden/howtomac/</loc>
+    <lastmod>2019-03-12T10:12:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/norsk/</loc>
+    <lastmod>2019-03-12T10:12:21+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/hidden/math/l1/</loc>
+    <lastmod>2019-02-19T10:00:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/tags/announcement/</loc>
+    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/olavstoppen/</loc>
+    <lastmod>2019-02-12T09:46:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/post/hello/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/about/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/showcase/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kodekameraten.no/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://kodekameraten.no/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nb-no"
+                href="http://kodekameraten.no/categories/"
+                />
+  </url>
+  
+</urlset>
